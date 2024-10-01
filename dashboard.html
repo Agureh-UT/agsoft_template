@@ -1,0 +1,609 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <title>Dashboard</title>
+
+      <!-- <link rel="stylesheet" href="./css/customBootrap.css?v=0.173"> -->
+    <!-- <link rel="stylesheet" href="./css/custom2.css?v=0.173"> -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8"> -->
+    <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./css/custom.css?v=0.173"> -->
+    <!-- <link rel="stylesheet" href="./css/frontendfundstyle.css?v=0.173"> -->
+    <link rel="stylesheet" href="./css/masterlayout.css?v=0.173">
+    <link rel="stylesheet" href="./css/alertMsg.min.css?v=0.173" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="./css/select2/css/select2.min.css"> -->
+    <!-- <link rel="stylesheet" href="./css/jquery-ui.css"> -->
+  <script>
+    const JS_SITE_ROOT = `./`;
+
+    function printContent(el) {
+      var restorepage = document.body.innerHTML;
+      var printcontent = document.getElementById(el).innerHTML;
+      document.body.innerHTML = printcontent;
+      window.print();
+      document.body.innerHTML = restorepage;
+      location.reload();
+    }
+  </script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <!-- content in head here! -->
+
+</head>
+
+<body>
+  <div class="main-layout">
+    
+<section class="top-section">
+  <ul class="pane1">
+    <li class="pane1_agsoftLogo">
+      <!-- <div class=""> -->
+      <img src="./images/systems/agsoftLogo_best.png" alt="AGsoft ERP" />
+      <!-- </div> -->
+    </li>
+    <li class="pane1_clientLogo">
+      <!-- <div class=""> -->
+      <img src="./images/clientLogos/clientLogo.png" alt="clientLogo" />
+      <span class="pane1_text">
+        <!-- <p>Organisation For Sustainable Development Africa(OSDA),</p>
+            <p>Nairobi,Kenya</p>
+            <p>info@osdafrik.org,</p>
+            <p> https://osdafrik.org/</p> -->
+        Organisation For Sustainable Development Africa(OSDA),
+        <br>
+        Nairobi,Kenya,
+        <br>
+        info@osdafrik.org,
+        <br>
+        https://osdafrik.org/
+
+      </span>
+      <!-- </div> -->
+    </li>
+    <li class="pane1_logout">
+      <!-- <div class=""> -->
+      <i class="fas fa-user-circle fa-3x"></i>
+
+      <a href="./register/logout">LOGOUT</a>
+      <!-- </div> -->
+    </li>
+  </ul>
+
+  <nav class="topnav" id="topnav">
+    <span class="sidenav-toggler"><i class="fa fa-bars"></i></span>
+    <i class="fas fa-bars burger" id=""></i>
+    <ul class="topnav-list">
+              <li class="topnav-item"><a class="topnav-link activelinkclass" href="./dashboards/index"><span> <i class="fas fa-tachometer-alt"></i> </span> DASHBOARD</a></li>
+                    <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-desktop"></i> eSYSTEM <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop ">
+                                          <a class="dropdown-item " href="./adminclients/index">Clients</a>
+                                                        <a class="dropdown-item " href="./projects/index">Projects</a>
+                                                        <a class="dropdown-item " href="./inventoryItems/index">Inventory Items</a>
+                                                        <a class="dropdown-item " href="./templatehelper/index">Templatehelper</a>
+                                                        <a class="dropdown-item " href="./costcentres/index">Costcentres</a>
+                                                        <a class="dropdown-item " href="./budgetlines/index">Budgetlines</a>
+                                                        <a class="dropdown-item " href="./tests/template">Template</a>
+                                    </div>
+        </li>
+                    <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-coins"></i> eFINANCE <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop ">
+                                          <a class="dropdown-item " href="./vouchers/index">Vouchers</a>
+                                                        <a class="dropdown-item " href="./vouchers/review">Review Vouchers</a>
+                                                        <a class="dropdown-item " href="./vouchers/approve">Approve Vouchers</a>
+                                    </div>
+        </li>
+                    <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-dolly"></i> ePROCUREMENT <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop ">
+                                          <a class="dropdown-item " href="./requisitions/index">Requisitions</a>
+                                                        <a class="dropdown-item " href="./requisitions/review">Requisitions Review</a>
+                                                        <a class="dropdown-item " href="./requisitions/approve">Requisitions Approval</a>
+                                                        <a class="dropdown-item " href="./purchaseorders/index">PurchaseOrders</a>
+                                                        <a class="dropdown-item " href="./purchaseorders/review">PurchaseOrders Review</a>
+                                                        <a class="dropdown-item " href="./purchaseorders/approve">PurchaseOrders Approval</a>
+                                    </div>
+        </li>
+                    <li class="topnav-item"><a class="topnav-link " href="./admindashboard/dashboard"><span> <i class="fas fa-tachometer-alt"></i> </span> ADMINPANEL</a></li>
+                          <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-user"></i> Hello: System Admin <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop dropdown-menu-right">
+                                          <a class="dropdown-item " href="./register/logout">Logout</a>
+                                                        <a class="dropdown-item " href="./useradmin/passwordupdate">Update Password</a>
+                                    </div>
+        </li>
+                  <!-- <li class="topnav-item">
+        <a href="#" class="topnav-link">
+
+          <i class="fas fa-tachometer-alt"></i>
+          <span>&nbsp; DASHBOARD</span>
+        </a>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-desktop"></i>
+          <span> &nbsp; eSYSTEM &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">Clients</a>
+          <a href="#">Projects</a>
+          <a href="#">Project</a>
+          <a href="#">Costcentres</a>
+          <a href="#">Budgetlines</a>
+          <a href="#">Template</a>
+        </div>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-coins"></i>
+          <span> &nbsp; eFINANCE &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">Voucher</a>
+          <a href="#">Invoice</a>
+
+        </div>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-dolly"></i>
+          <span> &nbsp; eLOGISTICS &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">SRF</a>
+          <a href="#">POs</a>
+
+        </div>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link">
+          <i class="fas fa-tachometer-alt"></i>
+          <span> &nbsp; ADMINPANEL </span>
+        </a>
+      </li>
+
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-user"></i>
+  
+          <span> &nbsp; HAKIM &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">Logout</a>
+          <a href="#">Update Password</a>
+          <a href="#">Update Password</a>
+          <a href="#">Logout</a>
+          <a href="#">Update Password</a>
+        </div>
+      </li> -->
+
+    </ul>
+  </nav>
+
+</section>    <!-- Add or remove active class on div with wrapper class to toggle side menu -->
+    <div class="wrapper">
+      <nav class="sidenav" id="sidenav">
+  <div class="sidenav-item">
+    <a href="#" class="sidenav-toggler-link sidenav-toggler">
+      <i class="fas fa-bars"></i>
+      <span>Resize</span>
+    </a>
+  </div>
+  <ul class="sidenav-list">
+            <li class="sidenav-item">
+          <a href="./dashboards/index" class="sidenav-link activelinkclass">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>DASHBOARD</span>
+          </a>
+        </li>
+              <li class="sidenav-item">
+          <a href="#" class="sidenav-link"><i class="fas fa-desktop"> </i>
+            <span>
+              eSYSTEM              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+          <ul class="d-none">
+                          <li>
+                <a href="./adminclients/index" class="sub_link ">
+                  Clients                </a>
+              </li>
+                          <li>
+                <a href="./projects/index" class="sub_link ">
+                  Projects                </a>
+              </li>
+                          <li>
+                <a href="./inventoryItems/index" class="sub_link ">
+                  Inventory Items                </a>
+              </li>
+                          <li>
+                <a href="./templatehelper/index" class="sub_link ">
+                  Templatehelper                </a>
+              </li>
+                          <li>
+                <a href="./costcentres/index" class="sub_link ">
+                  Costcentres                </a>
+              </li>
+                          <li>
+                <a href="./budgetlines/index" class="sub_link ">
+                  Budgetlines                </a>
+              </li>
+                          <li>
+                <a href="./tests/template" class="sub_link ">
+                  Template                </a>
+              </li>
+                      </ul>
+        </li>
+              <li class="sidenav-item">
+          <a href="#" class="sidenav-link"><i class="fas fa-coins"> </i>
+            <span>
+              eFINANCE              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+          <ul class="d-none">
+                          <li>
+                <a href="./vouchers/index" class="sub_link ">
+                  Vouchers                </a>
+              </li>
+                          <li>
+                <a href="./vouchers/review" class="sub_link ">
+                  Review Vouchers                </a>
+              </li>
+                          <li>
+                <a href="./vouchers/approve" class="sub_link ">
+                  Approve Vouchers                </a>
+              </li>
+                      </ul>
+        </li>
+              <li class="sidenav-item">
+          <a href="#" class="sidenav-link"><i class="fas fa-dolly"> </i>
+            <span>
+              ePROCUREMENT              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+          <ul class="d-none">
+                          <li>
+                <a href="./requisitions/index" class="sub_link ">
+                  Requisitions                </a>
+              </li>
+                          <li>
+                <a href="./requisitions/review" class="sub_link ">
+                  Requisitions Review                </a>
+              </li>
+                          <li>
+                <a href="./requisitions/approve" class="sub_link ">
+                  Requisitions Approval                </a>
+              </li>
+                          <li>
+                <a href="./purchaseorders/index" class="sub_link ">
+                  PurchaseOrders                </a>
+              </li>
+                          <li>
+                <a href="./purchaseorders/review" class="sub_link ">
+                  PurchaseOrders Review                </a>
+              </li>
+                          <li>
+                <a href="./purchaseorders/approve" class="sub_link ">
+                  PurchaseOrders Approval                </a>
+              </li>
+                      </ul>
+        </li>
+              <li class="sidenav-item">
+          <a href="./admindashboard/dashboard" class="sidenav-link ">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>ADMINPANEL</span>
+          </a>
+        </li>
+          <!-- <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>DASHBOARD</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-desktop"></i>
+        <span>eSYSTEM
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-coins"></i>
+        <span>eFINANCE
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-dolly"></i>
+        <span>eLOGISTICS
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>ADMINPANEL</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-user"></i>
+        <span>HAKIM
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Logout</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Update Password</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Update Profile</a>
+        </li>
+      </ul>
+    </li> -->
+  </ul>
+  <div class="sidenav-item">
+    <a href="#" class="sign-out">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Sign Out</span>
+    </a>
+  </div>
+</nav>      <main id="main" class="main">
+                <div class="container-fluid">
+<!-- <div class="container"> -->
+
+    <!-- Simple Invoice System Cards -->
+    <div class="row">
+        <div class="col">
+            <div class="card bg-secondary border-info text-white font-weight-bold o-hidden h-100">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <h2><i class="fas fa-file-invoice-dollar"></i></h2>
+                    </div>
+                    <h4 class="font-weight-bold"><b id="dashboard_card1"></b> Requisitions</h4>
+                </div>
+                <a class="card-footer border-info text-white clearfix small z-1" href="./requisitions/index">
+                    <span class="float-left">View Details</span>
+                    <span class="float-right">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-maincolor border-info text-white o-hidden h-100">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <h2><i class="fas fa-users"></i></h2>
+                    </div>
+                    <h4 class="font-weight-bold"><b id="dashboard_card2"></b> Purchase Orders</h4>
+                </div>
+                <a class="card-footer border-info text-white clearfix small z-1" href="./purchaseorders/index">
+                    <span class="float-left">View Details</span>
+                    <span class="float-right">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-secondary border-info text-white o-hidden h-100">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <h2><i class="fas fa-users-cog"></i></h2>
+                    </div>
+                    <h4 class="font-weight-bold"><b id="dashboard_card3"></b> Vouchers</h4>
+                </div>
+                <a class="card-footer border-info text-white clearfix small z-1" href="./vouchers/index">
+                    <span class="float-left">View Details</span>
+                    <span class="float-right">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-maincolor border-info text-white o-hidden h-100">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <h2><i class="fas fa-fw fa-dollar-sign"></i></h2>
+                    </div>
+                    <h4 class="font-weight-bold"><b id="dashboard_card4"></b> Projects</h4>
+                </div>
+                <a class="card-footer border-info text-white clearfix small z-1" href="./projects/index">
+                    <span class="float-left">View Details</span>
+                    <span class="float-right">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Simple Invoice System Information Cards -->
+
+    <!-- Monthly Income Graphic -->
+    <div class="card bg-secondary text-white font-weight-bold mb-3 border-info mb-3">
+        <div class="card-header border-info bg-maincolor">
+            <i class="fas fa-table"></i>
+            Latest Projects
+        </div>
+        <div class="card-body">
+            <div class="col-12 table-responsive">
+                <div id="latest_projects">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Monthly Income Graphic -->
+
+</div>
+<script>
+    // #5 sanitize input / escape characters
+    const sanitizeInput = (inputValue) => {
+        const div = document.createElement('div');
+        div.textContent = inputValue;
+        return div.innerHTML;
+    }
+
+    $(document).ready(function() {
+
+        $.ajax({
+            type: "POST",
+            data: {
+                action: 'add_info'
+            },
+            
+            url: `${JS_SITE_ROOT}dashboards/dashboardstats`,
+            dataType: "json",
+            success: function(data) {
+                $('#dashboard_card1').text(data['dashboard_card1']);
+                $('#dashboard_card2').text(data['dashboard_card2']);
+                $('#dashboard_card3').text(data['dashboard_card3']);
+                $('#dashboard_card4').text(data['dashboard_card4']);
+            }
+        });
+
+        $.ajax({
+            url: `${JS_SITE_ROOT}dashboards/dashboardstats`,
+            method: "POST",
+            data: {
+                action: 'latest_projects'
+            },
+            success: function(data) {
+                $('#latest_projects').html(data);
+
+                // const cleandata = sanitizeInput(data);
+                // console.log(cleandata);
+                // const latest_projects = document.getElementById('latest_projects');
+                // console.log(latest_projects);
+                // latest_projects.innerHTML = cleandata;
+            }
+        });
+
+    });
+</script>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>Developed by
+        <a class="footer-link" href="http://www.linchpin-ea.com" target="_blank"> CPA Abdihakim A. Gureh</a> |
+        All
+        Rights Reserved. © 2018-2023
+      </p>
+
+    </footer>
+  </div>
+  <!-- <script src="./js/popper.min.js"></script> -->
+  <!-- <script src="./js/bootstrap.min.js"></script> -->
+  <!-- <script src="./js/jquery.slimscroll.min.js"></script> -->
+  <script src="./js/masterlayout.js?v=0.173"></script>
+  <script src="./js/alertMsg.min.js?v=0.173"></script>
+  <!-- <script src="./js/jquery-ui/jquery-ui.min.js"></script> -->
+
+
+  <script>
+    // function 1 for top navbar dropdown
+    //Below are IFIS functions i.e Imediately invoked function expressions(they usually have a parenthesis at the end)
+    (function() {
+      var topnavpath = window.location.href;
+      // console.log('topnavpath', topnavpath);
+      $(".dropdown-item").each(function() {
+        // var HostExtension = 'http://198.74.59.231';
+        var HostExtension = 'http://localhost';
+        var topnavhref = $(this).attr('href');
+        topnavhref = HostExtension + topnavhref;
+        // console.log('topnav', topnavhref);
+        if (topnavpath === decodeURIComponent(topnavhref)) {
+          $(this).addClass('activelinkclass');
+          var parent = $(this).closest('.dropdown-list');
+          var grandparent = $(this).closest('li.topnav-item.dropdown');
+
+          // parent.addClass('show');
+          // grandparent.addClass('show');
+          $(grandparent).find('.topnav-link').first().addClass('activelinkclass');
+          // console.log('parent', parent);
+          // console.log('grandparent', grandparent);
+        };
+      });
+    }());
+
+
+    (function() {
+      var sidenavpath = window.location.href;
+      // console.log('sidenavpath', sidenavpath);
+      $(".sub_link").each(function() {
+        // var HostExtension = 'http://198.74.59.231';
+        var HostExtension_aside = 'http://localhost';
+        var sidenavhref = $(this).attr('href');
+        sidenavhref = HostExtension_aside + sidenavhref;
+        // console.log('sidenavhref', sidenavhref);
+        if (sidenavpath === decodeURIComponent(sidenavhref)) {
+          $(this).addClass('activelinkclass');
+          var parent = $(this).closest('ul');
+          parent.toggleClass('d-none');
+          $(this).closest('ul').toggleClass('d-none');
+          var grandparent = $(this).closest('li.sidenav-item');
+
+          $(grandparent).find('.sidenav-link').first().addClass('activelinkclass');
+          // console.log('parent', parent);
+          // console.log('grandparent', grandparent);
+        };
+      });
+    }());
+  </script>
+
+
+</body>
+
+</html>

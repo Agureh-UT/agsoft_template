@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <title>AG-Soft ERP</title>
+
+      <!-- <link rel="stylesheet" href="./css/customBootrap.css?v=0.173"> -->
+    <!-- <link rel="stylesheet" href="./css/custom2.css?v=0.173"> -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8"> -->
+    <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./css/custom.css?v=0.173"> -->
+    <!-- <link rel="stylesheet" href="./css/frontendfundstyle.css?v=0.173"> -->
+    <link rel="stylesheet" href="./css/masterlayout.css?v=0.173">
+    <link rel="stylesheet" href="./css/alertMsg.min.css?v=0.173" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="./css/select2/css/select2.min.css"> -->
+    <!-- <link rel="stylesheet" href="./css/jquery-ui.css"> -->
+  <script>
+    const JS_SITE_ROOT = `./`;
+
+    function printContent(el) {
+      var restorepage = document.body.innerHTML;
+      var printcontent = document.getElementById(el).innerHTML;
+      document.body.innerHTML = printcontent;
+      window.print();
+      document.body.innerHTML = restorepage;
+      location.reload();
+    }
+  </script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  </head>
+
+<body>
+  <div class="main-layout">
+    
+<section class="top-section">
+  <ul class="pane1">
+    <li class="pane1_agsoftLogo">
+      <!-- <div class=""> -->
+      <img src="./images/systems/agsoftLogo_best.png" alt="AGsoft ERP" />
+      <!-- </div> -->
+    </li>
+    <li class="pane1_clientLogo">
+      <!-- <div class=""> -->
+      <img src="./images/clientLogos/clientLogo.png" alt="clientLogo" />
+      <span class="pane1_text">
+        <!-- <p>Organisation For Sustainable Development Africa(OSDA),</p>
+            <p>Nairobi,Kenya</p>
+            <p>info@osdafrik.org,</p>
+            <p> https://osdafrik.org/</p> -->
+        Organisation For Sustainable Development Africa(OSDA),
+        <br>
+        Nairobi,Kenya,
+        <br>
+        info@osdafrik.org,
+        <br>
+        https://osdafrik.org/
+
+      </span>
+      <!-- </div> -->
+    </li>
+    <li class="pane1_logout">
+      <!-- <div class=""> -->
+      <i class="fas fa-user-circle fa-3x"></i>
+
+      <a href="./register/logout">LOGOUT</a>
+      <!-- </div> -->
+    </li>
+  </ul>
+
+  <nav class="topnav" id="topnav">
+    <span class="sidenav-toggler"><i class="fa fa-bars"></i></span>
+    <i class="fas fa-bars burger" id=""></i>
+    <ul class="topnav-list">
+              <li class="topnav-item"><a class="topnav-link " href="./dashboards/index"><span> <i class="fas fa-tachometer-alt"></i> </span> DASHBOARD</a></li>
+                    <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-desktop"></i> eSYSTEM <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop ">
+                                          <a class="dropdown-item " href="./adminclients/index">Clients</a>
+                                                        <a class="dropdown-item " href="./projects/index">Projects</a>
+                                                        <a class="dropdown-item " href="./inventoryItems/index">Inventory Items</a>
+                                                        <a class="dropdown-item " href="./templatehelper/index">Templatehelper</a>
+                                                        <a class="dropdown-item " href="./costcentres/index">Costcentres</a>
+                                                        <a class="dropdown-item " href="./budgetlines/index">Budgetlines</a>
+                                                        <a class="dropdown-item " href="./tests/template">Template</a>
+                                    </div>
+        </li>
+                    <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-coins"></i> eFINANCE <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop ">
+                                          <a class="dropdown-item " href="./vouchers/index">Vouchers</a>
+                                                        <a class="dropdown-item " href="./vouchers/review">Review Vouchers</a>
+                                                        <a class="dropdown-item " href="./vouchers/approve">Approve Vouchers</a>
+                                    </div>
+        </li>
+                    <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-dolly"></i> ePROCUREMENT <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop ">
+                                          <a class="dropdown-item " href="./requisitions/index">Requisitions</a>
+                                                        <a class="dropdown-item " href="./requisitions/review">Requisitions Review</a>
+                                                        <a class="dropdown-item " href="./requisitions/approve">Requisitions Approval</a>
+                                                        <a class="dropdown-item activelinkclass" href="./purchaseorders/index">PurchaseOrders</a>
+                                                        <a class="dropdown-item " href="./purchaseorders/review">PurchaseOrders Review</a>
+                                                        <a class="dropdown-item " href="./purchaseorders/approve">PurchaseOrders Approval</a>
+                                    </div>
+        </li>
+                    <li class="topnav-item"><a class="topnav-link " href="./admindashboard/dashboard"><span> <i class="fas fa-tachometer-alt"></i> </span> ADMINPANEL</a></li>
+                          <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-user"></i> Hello: System Admin <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop dropdown-menu-right">
+                                          <a class="dropdown-item " href="./register/logout">Logout</a>
+                                                        <a class="dropdown-item " href="./useradmin/passwordupdate">Update Password</a>
+                                    </div>
+        </li>
+                  <!-- <li class="topnav-item">
+        <a href="#" class="topnav-link">
+
+          <i class="fas fa-tachometer-alt"></i>
+          <span>&nbsp; DASHBOARD</span>
+        </a>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-desktop"></i>
+          <span> &nbsp; eSYSTEM &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">Clients</a>
+          <a href="#">Projects</a>
+          <a href="#">Project</a>
+          <a href="#">Costcentres</a>
+          <a href="#">Budgetlines</a>
+          <a href="#">Template</a>
+        </div>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-coins"></i>
+          <span> &nbsp; eFINANCE &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">Voucher</a>
+          <a href="#">Invoice</a>
+
+        </div>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-dolly"></i>
+          <span> &nbsp; eLOGISTICS &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">SRF</a>
+          <a href="#">POs</a>
+
+        </div>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link">
+          <i class="fas fa-tachometer-alt"></i>
+          <span> &nbsp; ADMINPANEL </span>
+        </a>
+      </li>
+
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-user"></i>
+  
+          <span> &nbsp; HAKIM &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">Logout</a>
+          <a href="#">Update Password</a>
+          <a href="#">Update Password</a>
+          <a href="#">Logout</a>
+          <a href="#">Update Password</a>
+        </div>
+      </li> -->
+
+    </ul>
+  </nav>
+
+</section>    <!-- Add or remove active class on div with wrapper class to toggle side menu -->
+    <div class="wrapper">
+      <nav class="sidenav" id="sidenav">
+  <div class="sidenav-item">
+    <a href="#" class="sidenav-toggler-link sidenav-toggler">
+      <i class="fas fa-bars"></i>
+      <span>Resize</span>
+    </a>
+  </div>
+  <ul class="sidenav-list">
+            <li class="sidenav-item">
+          <a href="./dashboards/index" class="sidenav-link ">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>DASHBOARD</span>
+          </a>
+        </li>
+              <li class="sidenav-item">
+          <a href="#" class="sidenav-link"><i class="fas fa-desktop"> </i>
+            <span>
+              eSYSTEM              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+          <ul class="d-none">
+                          <li>
+                <a href="./adminclients/index" class="sub_link ">
+                  Clients                </a>
+              </li>
+                          <li>
+                <a href="./projects/index" class="sub_link ">
+                  Projects                </a>
+              </li>
+                          <li>
+                <a href="./inventoryItems/index" class="sub_link ">
+                  Inventory Items                </a>
+              </li>
+                          <li>
+                <a href="./templatehelper/index" class="sub_link ">
+                  Templatehelper                </a>
+              </li>
+                          <li>
+                <a href="./costcentres/index" class="sub_link ">
+                  Costcentres                </a>
+              </li>
+                          <li>
+                <a href="./budgetlines/index" class="sub_link ">
+                  Budgetlines                </a>
+              </li>
+                          <li>
+                <a href="./tests/template" class="sub_link ">
+                  Template                </a>
+              </li>
+                      </ul>
+        </li>
+              <li class="sidenav-item">
+          <a href="#" class="sidenav-link"><i class="fas fa-coins"> </i>
+            <span>
+              eFINANCE              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+          <ul class="d-none">
+                          <li>
+                <a href="./vouchers/index" class="sub_link ">
+                  Vouchers                </a>
+              </li>
+                          <li>
+                <a href="./vouchers/review" class="sub_link ">
+                  Review Vouchers                </a>
+              </li>
+                          <li>
+                <a href="./vouchers/approve" class="sub_link ">
+                  Approve Vouchers                </a>
+              </li>
+                      </ul>
+        </li>
+              <li class="sidenav-item">
+          <a href="#" class="sidenav-link"><i class="fas fa-dolly"> </i>
+            <span>
+              ePROCUREMENT              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+          <ul class="d-none">
+                          <li>
+                <a href="./requisitions/index" class="sub_link ">
+                  Requisitions                </a>
+              </li>
+                          <li>
+                <a href="./requisitions/review" class="sub_link ">
+                  Requisitions Review                </a>
+              </li>
+                          <li>
+                <a href="./requisitions/approve" class="sub_link ">
+                  Requisitions Approval                </a>
+              </li>
+                          <li>
+                <a href="./purchaseorders/index" class="sub_link activelinkclass">
+                  PurchaseOrders                </a>
+              </li>
+                          <li>
+                <a href="./purchaseorders/review" class="sub_link ">
+                  PurchaseOrders Review                </a>
+              </li>
+                          <li>
+                <a href="./purchaseorders/approve" class="sub_link ">
+                  PurchaseOrders Approval                </a>
+              </li>
+                      </ul>
+        </li>
+              <li class="sidenav-item">
+          <a href="./admindashboard/dashboard" class="sidenav-link ">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>ADMINPANEL</span>
+          </a>
+        </li>
+          <!-- <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>DASHBOARD</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-desktop"></i>
+        <span>eSYSTEM
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-coins"></i>
+        <span>eFINANCE
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-dolly"></i>
+        <span>eLOGISTICS
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>ADMINPANEL</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-user"></i>
+        <span>HAKIM
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Logout</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Update Password</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Update Profile</a>
+        </li>
+      </ul>
+    </li> -->
+  </ul>
+  <div class="sidenav-item">
+    <a href="#" class="sign-out">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Sign Out</span>
+    </a>
+  </div>
+</nav>      <main id="main" class="main">
+                <div class="container-fluid">
+  <div class="card bg-dark text-white font-weight-bold border-darkBlue">
+
+    <div class="card-header">
+      <h6 class="font-weight-bold  text-uppercase small">Purchase Orders</h6>
+      <a class="btn btn-sm btn-secondary" href="./purchaseorders/excel"><i class="fas fa-plus"></i>Excel Export</a>
+      <a class="btn btn-sm btn-secondary" href="./purchaseorders/edit"><i class="fas fa-plus"></i> Add New</a>
+      <a class="btn btn-sm btn-secondary" href="./purchaseorders/formtemplate"><i class="fas fa-plus"></i> Formtemplate</a>
+    </div>
+    <div class="card-body">
+    <form id="pagerForm" action="" method="post" autocomplete="off" onsubmit="return false;">
+        <div class="row align-items-end  text-center text-uppercase text-white font-weight-bold">
+          <div class="form-group col-sm">
+            <!-- set to col-sm so as to stack on top of each other on small screen -->
+            <label class="sr-only" for="search">Search</label>
+            <div class="input-group">
+              <input class="form-control" id="search" name="search" value="" placeholder="Search..." />
+              <button class="input-group-append btn btn-sm bg-maincolor text-white"><i class="fas fa-search"></i></button>
+              <!-- P-1 padding-1 to center the search icon to centre -->
+            </div>
+          </div>
+          <input type="hidden" name="page" id="page" value="1" />          <input type="hidden" name="limit" id="limit" value="25" />          <div class="form-group col-sm"><label for="supplier" class="control-label">Supplier</label><select id="supplier" name="supplier"  class="form-control"><option value="" selected="selected">-Select Supplier-</option><option value="8">Abdirahman Sheikh Mohamed</option><option value="14">Al Habib Bookshop</option><option value="6">Al-Hussain Investment Limited</option><option value="16">Creditor/Financing Agent</option><option value="15">Equity Bank</option><option value="9">Guyo transaport and Logistics Limited</option><option value="10">Jimale Osman Abdille</option><option value="12">Manyatta Water Suppliers</option><option value="4">Marsabit Central Bookshop</option><option value="7">Nasibo Kotobo</option><option value="13">Osman Dube</option><option value="5">Rajwan Investment Limited</option><option value="11">Sololo Water Suppliers</option><option value="2">Staff Salary</option><option value="1">Tradesman Machinery Garments</option><option value="3">White City Communications Limited</option></select><span class="invalid-feedback"></span></div>          <div class="form-group col-sm"><label for="branch" class="control-label">Branch</label><select id="branch" name="branch"  class="form-control"><option value="" selected="selected">-Select Branch-</option><option value="5">Isiolo</option><option value="2">Mandera</option><option value="3">Marsabit</option><option value="4">Moyale</option><option value="1">Nairobi</option><option value="6">Samburu</option></select><span class="invalid-feedback"></span></div>          <div class="form-group col-sm"><label class="control-label" for="start_date">Star Date</label><input type="date" id="start_date" name="start_date" value="" class="form-control" /><span class="invalid-feedback"></span></div>          <div class="form-group col-sm"><label class="control-label" for="end_date">End Date</label><input type="date" id="end_date" name="end_date" value="" class="form-control" /><span class="invalid-feedback"></span></div>          <div class="form-group col-sm">
+            <button class="form-control btn btn-sm bg-maincolor text-white text-uppercase font-weight-bold">Search</button>
+          </div>
+        </div>
+      </form>
+      <!-- PAGINATION 1 -->
+
+      <ul class="pagination justify-content-center pagination-sm flex-wrap">
+        <li class="page-item">
+          <button class="page-link" onclick="pager(1)">Start
+          </button>
+        </li>
+        <li class="page-item  disabled">
+          <button class="page-link" onclick="pager(0)">Prev</button>
+        </li>
+                  <li class="page-item  active">
+            <button class="page-link" onclick="pager('1')">1            </button>
+          </li>
+                <li class="page-item  disabled">
+          <button class="page-link" onclick="pager(2)">Next</button>
+        </li>
+        <li class="page-item">
+          <button class="page-link" onclick="pager('1')">Last
+          </button>
+        </li>
+      </ul>
+      <div class="col-12 table-responsive">
+        <table class="table table-sm table-striped table-bordered text-white font-weight-bold bg-secondary border-darkBlue" id="itemTable" width="100%" cellspacing="0">
+          <thead class="bg-maincolor text-uppercase">
+            <th class="small text-uppercase font-weight-bolder">Ref No</th>
+            <th class="small text-uppercase font-weight-bolder">Description</th>
+            <th class="small text-uppercase font-weight-bolder">User</th>
+            <th class="small text-uppercase font-weight-bolder">Branch</th>
+            <th class="small text-uppercase font-weight-bolder">Supplier</th>
+            <th class="small text-uppercase font-weight-bolder">ValidDate</th>
+            <th class="small text-uppercase font-weight-bolder">Review Status</th>
+            <th class="small text-uppercase font-weight-bolder">Approval Status</th>
+            <th class="text-center small text-uppercase font-weight-bolder">Actions</th>
+
+          </thead>
+          <tbody>
+                          <tr data-id="1">
+                <td class="small text-uppercase font-weight-bolder">128000001</td>
+                <td class="small text-uppercase font-weight-bolder">Vehicle
+hire (core
+management
+) (5 days in
+Marsabit</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Marsabit</td>
+                <td class="small text-uppercase font-weight-bolder">Rajwan Investment Limited</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/1"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/1"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/1"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('1');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="2">
+                <td class="small text-uppercase font-weight-bolder">128000002</td>
+                <td class="small text-uppercase font-weight-bolder">Vehicle
+hire (core
+management
+) (3 days Isiolo)</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">Rajwan Investment Limited</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/2"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/2"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/2"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('2');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="3">
+                <td class="small text-uppercase font-weight-bolder">128000003</td>
+                <td class="small text-uppercase font-weight-bolder">Vehicle
+hire (Team
+Leaders) (7
+days
+Marsabit)</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Mandera</td>
+                <td class="small text-uppercase font-weight-bolder">Abdirahman Sheikh Mohamed</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/3"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/3"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/3"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('3');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="4">
+                <td class="small text-uppercase font-weight-bolder">128000004</td>
+                <td class="small text-uppercase font-weight-bolder">Vehicle
+hire (Team
+Leaders) (7
+days
+Marsabit)</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Marsabit</td>
+                <td class="small text-uppercase font-weight-bolder">Jimale Osman Abdille</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/4"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/4"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/4"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('4');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="5">
+                <td class="small text-uppercase font-weight-bolder">128000005</td>
+                <td class="small text-uppercase font-weight-bolder">Vehicle
+hire (Team
+Leaders) (4
+days Isiolo)</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">Abdirahman Sheikh Mohamed</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/5"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/5"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/5"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('5');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="6">
+                <td class="small text-uppercase font-weight-bolder">128000006</td>
+                <td class="small text-uppercase font-weight-bolder">Vehicle
+hire (Team
+Leaders) (4
+days Isiolo)</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">Jimale Osman Abdille</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/6"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/6"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/6"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('6');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="7">
+                <td class="small text-uppercase font-weight-bolder">128000007</td>
+                <td class="small text-uppercase font-weight-bolder">Assorted Stationary purchase for Marsabit</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Marsabit</td>
+                <td class="small text-uppercase font-weight-bolder">Marsabit Central Bookshop</td>
+                <td class="small text-uppercase font-weight-bolder">2022-02-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/7"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/7"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/7"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('7');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="8">
+                <td class="small text-uppercase font-weight-bolder">128000008</td>
+                <td class="small text-uppercase font-weight-bolder">Assorted stationary for Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">Marsabit Central Bookshop</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/8"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/8"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/8"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('8');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="9">
+                <td class="small text-uppercase font-weight-bolder">128000009</td>
+                <td class="small text-uppercase font-weight-bolder">Water supply trips</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Mandera</td>
+                <td class="small text-uppercase font-weight-bolder">Manyatta Water Suppliers</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/9"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/9"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/9"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('9');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="10">
+                <td class="small text-uppercase font-weight-bolder">128000010</td>
+                <td class="small text-uppercase font-weight-bolder">Water supply trips- Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">Sololo Water Suppliers</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/10"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/10"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/10"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('10');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="11">
+                <td class="small text-uppercase font-weight-bolder">128000011</td>
+                <td class="small text-uppercase font-weight-bolder">Airtime purchase for core staff in Marsabit</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Marsabit</td>
+                <td class="small text-uppercase font-weight-bolder">White City Communications Limited</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/11"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/11"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/11"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('11');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="12">
+                <td class="small text-uppercase font-weight-bolder">128000012</td>
+                <td class="small text-uppercase font-weight-bolder">Airtime purchase for core staff in Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">White City Communications Limited</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/12"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/12"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/12"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('12');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="13">
+                <td class="small text-uppercase font-weight-bolder">128000013</td>
+                <td class="small text-uppercase font-weight-bolder">Visibility and IEC materials purchase for the project</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Marsabit</td>
+                <td class="small text-uppercase font-weight-bolder">Tradesman Machinery Garments</td>
+                <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/13"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/13"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/13"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('13');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="14">
+                <td class="small text-uppercase font-weight-bolder">128000014</td>
+                <td class="small text-uppercase font-weight-bolder">Vehicle hire (One vehicle for core management for 8 days and one for Team-leaders for 11 days)</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Isiolo</td>
+                <td class="small text-uppercase font-weight-bolder">Osman Dube</td>
+                <td class="small text-uppercase font-weight-bolder">2023-01-11</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/14"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/14"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/14"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('14');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="15">
+                <td class="small text-uppercase font-weight-bolder">128000015</td>
+                <td class="small text-uppercase font-weight-bolder">Assorted stationary for Samburu data collection and field works</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Samburu</td>
+                <td class="small text-uppercase font-weight-bolder">Al Habib Bookshop</td>
+                <td class="small text-uppercase font-weight-bolder">2023-01-09</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/15"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/15"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/15"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('15');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                          <tr data-id="16">
+                <td class="small text-uppercase font-weight-bolder">128000016</td>
+                <td class="small text-uppercase font-weight-bolder">Communication/airtime costs for 2 core staff in Samburu</td>
+                <td class="small text-uppercase font-weight-bolder">yussuf.osda</td>
+                <td class="small text-uppercase font-weight-bolder">Samburu</td>
+                <td class="small text-uppercase font-weight-bolder">Al Habib Bookshop</td>
+                <td class="small text-uppercase font-weight-bolder">2023-01-09</td>
+                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
+                <td class="small text-uppercase font-weight-bolder">Approved</td>
+                <td class="text-center small text-uppercase font-weight-bolder">
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/16"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/16"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/16"><i class="fas fa-edit"></i>Formtemplate</a>
+                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('16');return false;"><i class="fas fa-trash-alt"></i></a>
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        <!-- PAGINATION 3 -->
+        <ul class="pagination justify-content-center pagination-sm flex-wrap">
+          <li class="page-item  disabled">
+            <button class="page-link" onclick="pager(0)">Prev</button>
+          </li>
+                      <li class="page-item  active">
+              <button class="page-link" onclick="pager('1')">1              </button>
+            </li>
+                    <li class="page-item  disabled">
+            <button class="page-link" onclick="pager(2)">Next</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function deleteReq(id) {
+    if (window.confirm("Are you sure you want to delete this req. It cannot be reversed.")) {
+      jQuery.ajax({
+        url: './purchaseorders/delete',
+        method: "POST",
+        data: {
+          id: id
+        },
+        success: function(resp) {
+          var msgType = (resp.success) ? 'success' : 'danger';
+          if (resp.success) {
+            jQuery('tr[data-id="' + resp.model_id + '"]').remove();
+          }
+          alertMsg(resp.msg, msgType);
+        }
+      });
+    }
+  }
+
+  function pager(page) {
+    document.getElementById('page').value = page;
+    var form = document.getElementById('pagerForm');
+    form.submit();
+  }
+
+  document.getElementById('pagerForm').addEventListener('submit', function(evt) {
+    var form = evt.target;
+    evt.preventDefault();
+    document.getElementById('page').value = 1;
+    form.submit();
+  });
+
+  // To prevent page reload/refresh confirmation when user clicks pager values are changed
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
+</script>
+
+      </main>
+    </div>
+    <footer class="footer">
+      <p>Developed by
+        <a class="footer-link" href="http://www.linchpin-ea.com" target="_blank"> CPA Abdihakim A. Gureh</a> |
+        All
+        Rights Reserved. © 2018-2023
+      </p>
+
+    </footer>
+  </div>
+  <!-- <script src="./js/popper.min.js"></script> -->
+  <!-- <script src="./js/bootstrap.min.js"></script> -->
+  <!-- <script src="./js/jquery.slimscroll.min.js"></script> -->
+  <script src="./js/masterlayout.js?v=0.173"></script>
+  <script src="./js/alertMsg.min.js?v=0.173"></script>
+  <!-- <script src="./js/jquery-ui/jquery-ui.min.js"></script> -->
+
+
+  <script>
+    // function 1 for top navbar dropdown
+    //Below are IFIS functions i.e Imediately invoked function expressions(they usually have a parenthesis at the end)
+    (function() {
+      var topnavpath = window.location.href;
+      // console.log('topnavpath', topnavpath);
+      $(".dropdown-item").each(function() {
+        // var HostExtension = 'http://198.74.59.231';
+        var HostExtension = 'http://localhost';
+        var topnavhref = $(this).attr('href');
+        topnavhref = HostExtension + topnavhref;
+        // console.log('topnav', topnavhref);
+        if (topnavpath === decodeURIComponent(topnavhref)) {
+          $(this).addClass('activelinkclass');
+          var parent = $(this).closest('.dropdown-list');
+          var grandparent = $(this).closest('li.topnav-item.dropdown');
+
+          // parent.addClass('show');
+          // grandparent.addClass('show');
+          $(grandparent).find('.topnav-link').first().addClass('activelinkclass');
+          // console.log('parent', parent);
+          // console.log('grandparent', grandparent);
+        };
+      });
+    }());
+
+
+    (function() {
+      var sidenavpath = window.location.href;
+      // console.log('sidenavpath', sidenavpath);
+      $(".sub_link").each(function() {
+        // var HostExtension = 'http://198.74.59.231';
+        var HostExtension_aside = 'http://localhost';
+        var sidenavhref = $(this).attr('href');
+        sidenavhref = HostExtension_aside + sidenavhref;
+        // console.log('sidenavhref', sidenavhref);
+        if (sidenavpath === decodeURIComponent(sidenavhref)) {
+          $(this).addClass('activelinkclass');
+          var parent = $(this).closest('ul');
+          parent.toggleClass('d-none');
+          $(this).closest('ul').toggleClass('d-none');
+          var grandparent = $(this).closest('li.sidenav-item');
+
+          $(grandparent).find('.sidenav-link').first().addClass('activelinkclass');
+          // console.log('parent', parent);
+          // console.log('grandparent', grandparent);
+        };
+      });
+    }());
+  </script>
+
+
+</body>
+
+</html>

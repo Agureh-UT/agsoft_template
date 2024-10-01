@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <title>131000026</title>
+
+      <!-- <link rel="stylesheet" href="./css/customBootrap.css?v=0.173"> -->
+    <!-- <link rel="stylesheet" href="./css/custom2.css?v=0.173"> -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8"> -->
+    <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./css/custom.css?v=0.173"> -->
+    <!-- <link rel="stylesheet" href="./css/frontendfundstyle.css?v=0.173"> -->
+    <link rel="stylesheet" href="./css/masterlayout.css?v=0.173">
+    <link rel="stylesheet" href="./css/alertMsg.min.css?v=0.173" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="./css/select2/css/select2.min.css"> -->
+    <!-- <link rel="stylesheet" href="./css/jquery-ui.css"> -->
+  <script>
+    const JS_SITE_ROOT = `./`;
+
+    function printContent(el) {
+      var restorepage = document.body.innerHTML;
+      var printcontent = document.getElementById(el).innerHTML;
+      document.body.innerHTML = printcontent;
+      window.print();
+      document.body.innerHTML = restorepage;
+      location.reload();
+    }
+  </script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="./css/select2/css/select2.min.css">
+<script src="./css/select2/js/select2.full.min.js"></script>
+</head>
+
+<body>
+  <div class="main-layout">
+    
+<section class="top-section">
+  <ul class="pane1">
+    <li class="pane1_agsoftLogo">
+      <!-- <div class=""> -->
+      <img src="./images/systems/agsoftLogo_best.png" alt="AGsoft ERP" />
+      <!-- </div> -->
+    </li>
+    <li class="pane1_clientLogo">
+      <!-- <div class=""> -->
+      <img src="./images/clientLogos/clientLogo.png" alt="clientLogo" />
+      <span class="pane1_text">
+        <!-- <p>Organisation For Sustainable Development Africa(OSDA),</p>
+            <p>Nairobi,Kenya</p>
+            <p>info@osdafrik.org,</p>
+            <p> https://osdafrik.org/</p> -->
+        Organisation For Sustainable Development Africa(OSDA),
+        <br>
+        Nairobi,Kenya,
+        <br>
+        info@osdafrik.org,
+        <br>
+        https://osdafrik.org/
+
+      </span>
+      <!-- </div> -->
+    </li>
+    <li class="pane1_logout">
+      <!-- <div class=""> -->
+      <i class="fas fa-user-circle fa-3x"></i>
+
+      <a href="./register/logout">LOGOUT</a>
+      <!-- </div> -->
+    </li>
+  </ul>
+
+  <nav class="topnav" id="topnav">
+    <span class="sidenav-toggler"><i class="fa fa-bars"></i></span>
+    <i class="fas fa-bars burger" id=""></i>
+    <ul class="topnav-list">
+              <li class="topnav-item"><a class="topnav-link " href="./dashboards/index"><span> <i class="fas fa-tachometer-alt"></i> </span> DASHBOARD</a></li>
+                    <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-desktop"></i> eSYSTEM <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop ">
+                                          <a class="dropdown-item " href="./adminclients/index">Clients</a>
+                                                        <a class="dropdown-item " href="./projects/index">Projects</a>
+                                                        <a class="dropdown-item " href="./inventoryItems/index">Inventory Items</a>
+                                                        <a class="dropdown-item " href="./templatehelper/index">Templatehelper</a>
+                                                        <a class="dropdown-item " href="./costcentres/index">Costcentres</a>
+                                                        <a class="dropdown-item " href="./budgetlines/index">Budgetlines</a>
+                                                        <a class="dropdown-item " href="./tests/template">Template</a>
+                                    </div>
+        </li>
+                    <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-coins"></i> eFINANCE <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop ">
+                                          <a class="dropdown-item " href="./vouchers/index">Vouchers</a>
+                                                        <a class="dropdown-item " href="./vouchers/review">Review Vouchers</a>
+                                                        <a class="dropdown-item " href="./vouchers/approve">Approve Vouchers</a>
+                                    </div>
+        </li>
+                    <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-dolly"></i> ePROCUREMENT <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop ">
+                                          <a class="dropdown-item " href="./requisitions/index">Requisitions</a>
+                                                        <a class="dropdown-item " href="./requisitions/review">Requisitions Review</a>
+                                                        <a class="dropdown-item " href="./requisitions/approve">Requisitions Approval</a>
+                                                        <a class="dropdown-item " href="./purchaseorders/index">PurchaseOrders</a>
+                                                        <a class="dropdown-item " href="./purchaseorders/review">PurchaseOrders Review</a>
+                                                        <a class="dropdown-item " href="./purchaseorders/approve">PurchaseOrders Approval</a>
+                                    </div>
+        </li>
+                    <li class="topnav-item"><a class="topnav-link " href="./admindashboard/dashboard"><span> <i class="fas fa-tachometer-alt"></i> </span> ADMINPANEL</a></li>
+                          <li class="topnav-item dropdown">
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-user"></i> Hello: System Admin <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-list cust-drop dropdown-menu-right">
+                                          <a class="dropdown-item " href="./register/logout">Logout</a>
+                                                        <a class="dropdown-item " href="./useradmin/passwordupdate">Update Password</a>
+                                    </div>
+        </li>
+                  <!-- <li class="topnav-item">
+        <a href="#" class="topnav-link">
+
+          <i class="fas fa-tachometer-alt"></i>
+          <span>&nbsp; DASHBOARD</span>
+        </a>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-desktop"></i>
+          <span> &nbsp; eSYSTEM &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">Clients</a>
+          <a href="#">Projects</a>
+          <a href="#">Project</a>
+          <a href="#">Costcentres</a>
+          <a href="#">Budgetlines</a>
+          <a href="#">Template</a>
+        </div>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-coins"></i>
+          <span> &nbsp; eFINANCE &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">Voucher</a>
+          <a href="#">Invoice</a>
+
+        </div>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-dolly"></i>
+          <span> &nbsp; eLOGISTICS &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">SRF</a>
+          <a href="#">POs</a>
+
+        </div>
+      </li>
+      <li class="topnav-item">
+        <a href="#" class="topnav-link">
+          <i class="fas fa-tachometer-alt"></i>
+          <span> &nbsp; ADMINPANEL </span>
+        </a>
+      </li>
+
+      <li class="topnav-item">
+        <a href="#" class="topnav-link dropdown-btn">
+          <i class="fas fa-user"></i>
+  
+          <span> &nbsp; HAKIM &nbsp; </span>
+          <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-list">
+          <a href="#">Logout</a>
+          <a href="#">Update Password</a>
+          <a href="#">Update Password</a>
+          <a href="#">Logout</a>
+          <a href="#">Update Password</a>
+        </div>
+      </li> -->
+
+    </ul>
+  </nav>
+
+</section>    <!-- Add or remove active class on div with wrapper class to toggle side menu -->
+    <div class="wrapper">
+      <nav class="sidenav" id="sidenav">
+  <div class="sidenav-item">
+    <a href="#" class="sidenav-toggler-link sidenav-toggler">
+      <i class="fas fa-bars"></i>
+      <span>Resize</span>
+    </a>
+  </div>
+  <ul class="sidenav-list">
+            <li class="sidenav-item">
+          <a href="./dashboards/index" class="sidenav-link ">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>DASHBOARD</span>
+          </a>
+        </li>
+              <li class="sidenav-item">
+          <a href="#" class="sidenav-link"><i class="fas fa-desktop"> </i>
+            <span>
+              eSYSTEM              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+          <ul class="d-none">
+                          <li>
+                <a href="./adminclients/index" class="sub_link ">
+                  Clients                </a>
+              </li>
+                          <li>
+                <a href="./projects/index" class="sub_link ">
+                  Projects                </a>
+              </li>
+                          <li>
+                <a href="./inventoryItems/index" class="sub_link ">
+                  Inventory Items                </a>
+              </li>
+                          <li>
+                <a href="./templatehelper/index" class="sub_link ">
+                  Templatehelper                </a>
+              </li>
+                          <li>
+                <a href="./costcentres/index" class="sub_link ">
+                  Costcentres                </a>
+              </li>
+                          <li>
+                <a href="./budgetlines/index" class="sub_link ">
+                  Budgetlines                </a>
+              </li>
+                          <li>
+                <a href="./tests/template" class="sub_link ">
+                  Template                </a>
+              </li>
+                      </ul>
+        </li>
+              <li class="sidenav-item">
+          <a href="#" class="sidenav-link"><i class="fas fa-coins"> </i>
+            <span>
+              eFINANCE              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+          <ul class="d-none">
+                          <li>
+                <a href="./vouchers/index" class="sub_link ">
+                  Vouchers                </a>
+              </li>
+                          <li>
+                <a href="./vouchers/review" class="sub_link ">
+                  Review Vouchers                </a>
+              </li>
+                          <li>
+                <a href="./vouchers/approve" class="sub_link ">
+                  Approve Vouchers                </a>
+              </li>
+                      </ul>
+        </li>
+              <li class="sidenav-item">
+          <a href="#" class="sidenav-link"><i class="fas fa-dolly"> </i>
+            <span>
+              ePROCUREMENT              <i class="fas fa-angle-down"></i>
+            </span>
+          </a>
+          <ul class="d-none">
+                          <li>
+                <a href="./requisitions/index" class="sub_link ">
+                  Requisitions                </a>
+              </li>
+                          <li>
+                <a href="./requisitions/review" class="sub_link ">
+                  Requisitions Review                </a>
+              </li>
+                          <li>
+                <a href="./requisitions/approve" class="sub_link ">
+                  Requisitions Approval                </a>
+              </li>
+                          <li>
+                <a href="./purchaseorders/index" class="sub_link ">
+                  PurchaseOrders                </a>
+              </li>
+                          <li>
+                <a href="./purchaseorders/review" class="sub_link ">
+                  PurchaseOrders Review                </a>
+              </li>
+                          <li>
+                <a href="./purchaseorders/approve" class="sub_link ">
+                  PurchaseOrders Approval                </a>
+              </li>
+                      </ul>
+        </li>
+              <li class="sidenav-item">
+          <a href="./admindashboard/dashboard" class="sidenav-link ">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>ADMINPANEL</span>
+          </a>
+        </li>
+          <!-- <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>DASHBOARD</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-desktop"></i>
+        <span>eSYSTEM
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-coins"></i>
+        <span>eFINANCE
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-dolly"></i>
+        <span>eLOGISTICS
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Projects</a>
+        </li>
+      </ul>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>ADMINPANEL</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="#" class="sidenav-link">
+        <i class="fas fa-user"></i>
+        <span>HAKIM
+          <i class="fas fa-angle-down"></i>
+        </span>
+      </a>
+      <ul class="d-none">
+        <li>
+          <a href="#" class="sub_link">Logout</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Update Password</a>
+        </li>
+        <li>
+          <a href="#" class="sub_link">Update Profile</a>
+        </li>
+      </ul>
+    </li> -->
+  </ul>
+  <div class="sidenav-item">
+    <a href="#" class="sign-out">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Sign Out</span>
+    </a>
+  </div>
+</nav>      <main id="main" class="main">
+                <div class="container-fluid">
+  <div class="card border-dark bg-dark text-white font-weight-bold">
+    <div class="card-header">
+      <a class="btn btn-secondary btn-sm text-white font-weight-bold text-uppercase" href="./vouchers/index"><i class="fas fa-hand-point-left"></i> Back</a>
+      <h6 class="font-weight-bold">Edit-131000026</h6>
+    </div>
+    <form action="" method="POST" class="card-body bg-secondary" id="mainForm">
+      <div class="row bg-dark text-uppercase text-white font-weight-bold mb-1">
+        <input type="hidden" name="csrf_token" id="csrf_token" value="5HCc0wNeXqtOXFb/dGSXdBLjCp3MJGBWdKcOR/0N4lI=" />        <!-- Trx number Div -->
+        <div class="form-group col"><label class="control-label" for="ref_no">Trx no</label><input type="text" id="ref_no" name="ref_no" value="131000026" class="form-control" readonly="readonly" /><span class="invalid-feedback"></span></div>        <!-- Branch Div -->
+        <div class="form-group col"><label for="branch_id" class="control-label">Branch</label><select id="branch_id" name="branch_id"  class="form-control"><option value="" selected="selected">-Select Branch-</option><option value="5">Isiolo</option><option value="2">Mandera</option><option value="3">Marsabit</option><option value="4">Moyale</option><option value="1">Nairobi</option><option value="6">Samburu</option></select><span class="invalid-feedback"></span></div>        <!-- Trx Type Div -->
+        <div class="form-group col"><label for="trx_type" class="control-label">Trx Type</label><select id="trx_type" name="trx_type"  class="form-control"><option value="">-Select Trxtype-</option><option value="4" selected="selected">API</option><option value="10">Assets  Wear And Tear</option><option value="9">Assets Depreciation</option><option value="11">End Year Adjustment</option><option value="7">Inter Bank Transfer</option><option value="6">Journal</option><option value="3">Partial Payment</option><option value="1">Payment</option><option value="8">Petty Cash Transfer</option><option value="2">Receipt</option><option value="5">Reversal</option></select><span class="invalid-feedback"></span></div>        <!-- Trx Valid Date Div -->
+        <div class="form-group col"><label class="control-label" for="valid_date">Valid Date</label><input type="date" id="valid_date" name="valid_date" value="2022-12-20" class="form-control" /><span class="invalid-feedback"></span></div>      </div>
+
+      <div class="row bg-dark text-uppercase text-white font-weight-bold mb-1">
+        <!-- Project Div -->
+        <div class="form-group col"><label for="project_id" class="control-label">Project</label><select id="project_id" name="project_id"  class="form-control"><option value="" selected="selected">-Select Project-</option><option value="1">DX.0101-DTM::DTM-Mobility Tracking and Multi-Sectoral Assessment</option></select><span class="invalid-feedback"></span></div>        <!-- Supplier Div -->
+        <div class="form-group col"><label for="supplier_id" class="control-label">Supplier</label><select id="supplier_id" name="supplier_id"  class="form-control  form-control-sm"><option value="">-Select Supplier-</option><option value="8">Abdirahman Sheikh Mohamed</option><option value="14">Al Habib Bookshop</option><option value="6">Al-Hussain Investment Limited</option><option value="16">Creditor/Financing Agent</option><option value="15">Equity Bank</option><option value="9">Guyo transaport and Logistics Limited</option><option value="10">Jimale Osman Abdille</option><option value="12">Manyatta Water Suppliers</option><option value="4">Marsabit Central Bookshop</option><option value="7">Nasibo Kotobo</option><option value="13">Osman Dube</option><option value="5">Rajwan Investment Limited</option><option value="11">Sololo Water Suppliers</option><option value="2" selected="selected">Staff Salary</option><option value="1">Tradesman Machinery Garments</option><option value="3">White City Communications Limited</option></select><span class="invalid-feedback"></span></div>        <!-- Trx Document Div -->
+        <div class="form-group col"><label for="document_id" class="control-label">Document</label><select id="document_id" name="document_id"  class="form-control"><option value="">-Select Invoice-</option><option value="50" selected="selected">50:Kimzenew:2100.00</option><option value="51">51:Kimzenew:212.10</option></select><span class="invalid-feedback"></span></div>      </div>
+      <div class="row bg-dark text-uppercase text-white font-weight-bold mb-3">
+        <!-- Trx Description Div -->
+        <div class="form-group col"><label for="description" class="control-label">Description</label><textarea id="description" name="description" class="form-control" rows="2">Electricity Cost For Marsbit Office for 1 month</textarea><span class="invalid-feedback"></span></div>        <!-- Trx Has Budgetlines Div -->
+        <div class="form-check-inline-sm form-group col-md-12"><label for="has_budgetlines" class="form-check-label">HasBgetlines <input type="checkbox" id="has_budgetlines" name="has_budgetlines" value="on" checked="checked" class="input-sm form-check-input-sm"><span class="invalid-feedback"></span></label></div>
+      </div>
+
+      <div class="row bg-dark mb-3">
+        <!-- Budgetline Counter Div  make sure the Counter is set to 0 on add view and set to "" empty on edit view.-->
+        <div class="form-group col"><label class="control-label" for="voucher_bgtline_counter"></label><input type="text" id="voucher_bgtline_counter" name="voucher_bgtline_counter" value="0" class="form-control" readonly="readonly" /><span class="invalid-feedback"></span></div>
+        <!-- Counter Div  make sure the Counter is set to 0 on add view and set to "" empty on edit view.-->
+        <div class="form-group col"><label class="control-label" for="voucher_gl_counter"></label><input type="text" id="voucher_gl_counter" name="voucher_gl_counter" value="0" class="form-control" readonly="readonly" /><span class="invalid-feedback"></span></div>      </div>
+
+      <fieldset class="row bg-dark mb-3">
+        <legend class="col-12 text-center text-uppercase text-white font-weight-bold bg-dark">Project budgetlines Section</legend>
+        <div class="col-12 table-responsive">
+          <table class="table table-sm table-striped table-bordered text-uppercase text-white font-weight-bold" id="budgetlinestable">
+            <thead class="bg-maincolor">
+              <tr>
+                <th>#</th>
+                <th>Project ID</th>
+                <th>Project_Budgetline_Ref ID</th>
+                <th>Project_Budgetline_Ref Balance</th>
+                <th>GlAccount ID</th>
+                <th>Amount</th>
+
+                <th>
+                  <center> <button type="button" name="addBudgetline" class="btn btn-secondary btn-sm btnaddbudgetlines"><span class="fas fa-plus"> Add BGTlines</span></button></center>
+                </th>
+              </tr>
+
+            </thead>
+                          <tr>
+                <!-- voucher_budgetline_id Make sure the value of the name attribute is referenced correctly and as per the forloop in respective Ctroller -->
+                <td><input type="hidden" class="form-control voucher_budgetline_id" id="requisition_item_id" name="voucher_budgetline_id_1" value="21" readonly /></td>
+
+                <!-- Project Id -->
+                <td><div class="form-group"><label for="project_id_1" class="control-label"></label><select id="project_id_1" name="project_id_1"  class="form-control-sm project_id" style="width:200px"><option value="">-Select Project-</option><option value="1" selected="selected">DX.0101-DTM::DTM-Mobility Tracking and Multi-Sectoral Assessment</option></select><span class="invalid-feedback"></span></div> </td>
+                <!-- Budgetline Id -->
+                <td><div class="form-group"><label for="project_budgetline_ref_id_1" class="control-label"></label><select id="project_budgetline_ref_id_1" name="project_budgetline_ref_id_1"  class="form-control project_budgetline_ref_id" style="width:200px"><option value="">-Select BudgetlineRef-</option><option value="1">A.1::Project Coordinator::DX.0101-DTM</option><option value="2">A.2::Project Officer::DX.0101-DTM</option><option value="3">A.3::HR Assistant::DX.0101-DTM</option><option value="4">A.4::Finance Manager::DX.0101-DTM</option><option value="5">A.5::Team Leaders(5 Marsabit, 2 Isiolo)::DX.0101-DTM</option><option value="6">A.6::Enumerators (44 Marsabit, 23 Isiolo)::DX.0101-DTM</option><option value="7">B.1::Vehicle hire (core management) (5 days Marsabit, 3 days Isiolo)::DX.0101-DTM</option><option value="8">B.2::Vehicle hire (Team Leaders) (7 days Marsabit, 4 days Isiolo)::DX.0101-DTM</option><option value="9">C.1::Assorted Stationery (30,000 Marsabit, 10,000 Isiolo)::DX.0101-DTM</option><option value="10" selected="selected">D.1::Electricity (2 offices (Mar &amp; Isiolo) for 1 month)::DX.0101-DTM</option><option value="11">D.2::water bill (2 offices (Mar &amp; Isiolo) for 1 month)::DX.0101-DTM</option><option value="12">D.3::Communication cost ( Data) for core staffs (3 Mar, 1 Isiolo)::DX.0101-DTM</option><option value="13">D.4::Communication cost ( Data) for Team leaders &amp; Enumerators (40 En. Marsabit &amp; 21 En. Isiolo + 7 TLs)::DX.0101-DTM</option><option value="14">E.1::Visibility::DX.0101-DTM</option></select><span class="invalid-feedback"></span></div> </td>
+                <!-- budgetline_balance -->
+                <td> <div class="form-group"><label class="control-label" for="budgetline_balance_1"></label><input type="number" id="budgetline_balance_1" name="budgetline_balance_1" value="5000.00" class="form-control  budgetline_balance" step="any" readonly="readonly" /><span class="invalid-feedback"></span></div></td>
+                <!-- glaccount_id -->
+                <td><div><label for="voucher_budgetline_gl_id_1" class="control-label"></label><select id="voucher_budgetline_gl_id_1" name="voucher_budgetline_gl_id_1"  class="form-control  voucher_budgetline_gl_id" style="width:200px"><option value="">-Select GlAccount-</option><option value="1" selected="selected">Motor Vehicles</option><option value="2">Furniture&amp;Fittings</option><option value="3">Equity Bank</option><option value="4">Long Term Liabilities</option><option value="5">Short Term Liabilities</option><option value="6">Premier Bank 002</option><option value="7">Premier Bank 003</option><option value="8">Salaries and Employee Expenses</option><option value="9">Beneficiary Supplies &amp; Support</option><option value="10">Non Current Asset 3</option><option value="11">Premier Bank 004</option><option value="12">Premier Bank 005</option><option value="13">Premier Bank 006</option><option value="14">Premier Bank 007</option><option value="15">Premier Bank 008</option><option value="16">Premier Bank 009</option><option value="17">Premier Bank 010</option><option value="18">Premier Bank 011</option><option value="19">Bank Charges</option><option value="20">Vehicle Rental Cost</option><option value="21">Stationery Costs</option><option value="22">Utilities(Water and Electricity)</option><option value="23">Communication &amp; Internet Costs</option><option value="24">IEC, Visibility and Branding Costs</option><option value="25">Revenue &amp; Disbursements</option></select><span class="invalid-feedback"></span></div></td>
+                <!-- Price div -->
+                <td> <div><label class="control-label" for="amount_1"></label><input type="number" id="amount_1" name="amount_1" value="1893.25" class="form-control amount" step="any" ="" /><span class="invalid-feedback"></span></div> </td>
+                <!-- btnremoveProduct Div -->
+                <td>
+                  <div class="pt-4">
+                    <center><button type="button" name="removebudgetline_1" class="btn btn-danger btn-sm btnremovebudgetline"><span class="fas fa-times"></span></button>
+                      <center>
+                  </div>
+                </td>
+              </tr>
+                      </table>
+        </div>
+      </fieldset>
+
+      <!-- Gl Accounts Row -->
+      <fieldset class="row bg-dark mb-3">
+        <legend class="col-12 text-center text-uppercase text-white font-weight-bold bg-dark">Charged GL Accounts Section</legend>
+        <div class="col-12 table-responsive">
+          <table class="table table-sm table-striped table-bordered text-uppercase text-white font-weight-bold" id="glaccounttable">
+          <thead class="bg-maincolor">
+              <tr>
+                <th>#</th>
+                <th>GlAccount ID</th>
+                <th>Gl-Balance</th>
+                <th>EntryType(DR/CR)</th>
+                <th>Debit $</< /th>
+                <th>Credit $</< /th>
+                <th>
+                  <center> <button type="button" name="add" class="btn btn-secondary btn-sm btnadd"><span class="fas fa-plus"> Add GL
+                        Accounts</span></button></center>
+                </th>
+              </tr>
+            </thead>
+                          <tr>
+                <!-- trxgl_id Make sure the value of the name attribute is referenced correctly and as per the forloop in respective Ctroller -->
+                <td><input type="hidden" class="form-control  trxgl_id" name="voucher_gl_id_1" value="51" readonly></td>
+                <!-- glaccount_id -->
+                <td><div class=""><label for="gl_account_id_1" class="control-label"></label><select id="gl_account_id_1" name="gl_account_id_1"  class=" form-control  glaccount_id" style="width:200px"><option value="">-Select GlAccount-</option><option value="1">Motor Vehicles</option><option value="2">Furniture&amp;Fittings</option><option value="3">Equity Bank</option><option value="4">Long Term Liabilities</option><option value="5">Short Term Liabilities</option><option value="6">Premier Bank 002</option><option value="7">Premier Bank 003</option><option value="8">Salaries and Employee Expenses</option><option value="9">Beneficiary Supplies &amp; Support</option><option value="10">Non Current Asset 3</option><option value="11">Premier Bank 004</option><option value="12">Premier Bank 005</option><option value="13">Premier Bank 006</option><option value="14">Premier Bank 007</option><option value="15">Premier Bank 008</option><option value="16">Premier Bank 009</option><option value="17">Premier Bank 010</option><option value="18">Premier Bank 011</option><option value="19">Bank Charges</option><option value="20">Vehicle Rental Cost</option><option value="21">Stationery Costs</option><option value="22" selected="selected">Utilities(Water and Electricity)</option><option value="23">Communication &amp; Internet Costs</option><option value="24">IEC, Visibility and Branding Costs</option><option value="25">Revenue &amp; Disbursements</option></select><span class="invalid-feedback"></span></div>                </td>
+                <!-- glaccount_amount -->
+                <td> <div><label class="control-label" for="glaccount_amount_1"></label><input type="number" id="glaccount_amount_1" name="glaccount_amount_1" value="0.00" class="form-control  glaccount_amount" step="any" readonly="readonly" /><span class="invalid-feedback"></span></div>                </td>
+                <!-- entry_type -->
+                <td><div class=""><label for="entry_type_1" class="control-label"></label><select id="entry_type_1" name="entry_type_1"  class="form-control  entry_type"><option value="D" selected="selected">Debit</option><option value="C">Credit</option></select><span class="invalid-feedback"></span></div>                </td>
+                <!-- Amount Debit input Div -->
+                <td> <div><label class="control-label" for="amount_debit_1"></label><input type="number" id="amount_debit_1" name="amount_debit_1" value="1893.25" class="form-control   amount_debit" step="any" /><span class="invalid-feedback"></span></div>                </td>
+                <!-- Amount Credit input Div -->
+                <td><div><label class="control-label" for="amount_credit_1"></label><input type="number" id="amount_credit_1" name="amount_credit_1" value="0.00" class="form-control  amount_credit" step="any" /><span class="invalid-feedback"></span></div>                </td>
+                <!-- btnremove Div -->
+                <td>
+                  <div class="pt-4">
+                    <center><button type="button" name="remove__1" class="btn btn-danger btn-sm btnremove "><i class="fas fa-trash"></i></button></center>
+                  </div>
+                </td>
+              </tr>
+                          <tr>
+                <!-- trxgl_id Make sure the value of the name attribute is referenced correctly and as per the forloop in respective Ctroller -->
+                <td><input type="hidden" class="form-control  trxgl_id" name="voucher_gl_id_2" value="52" readonly></td>
+                <!-- glaccount_id -->
+                <td><div class=""><label for="gl_account_id_2" class="control-label"></label><select id="gl_account_id_2" name="gl_account_id_2"  class=" form-control  glaccount_id" style="width:200px"><option value="">-Select GlAccount-</option><option value="1">Motor Vehicles</option><option value="2">Furniture&amp;Fittings</option><option value="3">Equity Bank</option><option value="4">Long Term Liabilities</option><option value="5" selected="selected">Short Term Liabilities</option><option value="6">Premier Bank 002</option><option value="7">Premier Bank 003</option><option value="8">Salaries and Employee Expenses</option><option value="9">Beneficiary Supplies &amp; Support</option><option value="10">Non Current Asset 3</option><option value="11">Premier Bank 004</option><option value="12">Premier Bank 005</option><option value="13">Premier Bank 006</option><option value="14">Premier Bank 007</option><option value="15">Premier Bank 008</option><option value="16">Premier Bank 009</option><option value="17">Premier Bank 010</option><option value="18">Premier Bank 011</option><option value="19">Bank Charges</option><option value="20">Vehicle Rental Cost</option><option value="21">Stationery Costs</option><option value="22">Utilities(Water and Electricity)</option><option value="23">Communication &amp; Internet Costs</option><option value="24">IEC, Visibility and Branding Costs</option><option value="25">Revenue &amp; Disbursements</option></select><span class="invalid-feedback"></span></div>                </td>
+                <!-- glaccount_amount -->
+                <td> <div><label class="control-label" for="glaccount_amount_2"></label><input type="number" id="glaccount_amount_2" name="glaccount_amount_2" value="0.00" class="form-control  glaccount_amount" step="any" readonly="readonly" /><span class="invalid-feedback"></span></div>                </td>
+                <!-- entry_type -->
+                <td><div class=""><label for="entry_type_2" class="control-label"></label><select id="entry_type_2" name="entry_type_2"  class="form-control  entry_type"><option value="D">Debit</option><option value="C" selected="selected">Credit</option></select><span class="invalid-feedback"></span></div>                </td>
+                <!-- Amount Debit input Div -->
+                <td> <div><label class="control-label" for="amount_debit_2"></label><input type="number" id="amount_debit_2" name="amount_debit_2" value="0.00" class="form-control   amount_debit" step="any" /><span class="invalid-feedback"></span></div>                </td>
+                <!-- Amount Credit input Div -->
+                <td><div><label class="control-label" for="amount_credit_2"></label><input type="number" id="amount_credit_2" name="amount_credit_2" value="1893.25" class="form-control  amount_credit" step="any" /><span class="invalid-feedback"></span></div>                </td>
+                <!-- btnremove Div -->
+                <td>
+                  <div class="pt-4">
+                    <center><button type="button" name="remove__2" class="btn btn-danger btn-sm btnremove "><i class="fas fa-trash"></i></button></center>
+                  </div>
+                </td>
+              </tr>
+                        <tfoot class="">
+              <tr class="">
+                <td class=""></td>
+                <td></td>
+                <td></td>
+                <td class="text-center font-weight-bold text-white p-3 bg-secondary">TOTAL</td>
+                <td class="p-3 bg-secondary">
+                  <div class="pt-2"><label class="control-label" for="dr_total"></label><input type="number" id="dr_total" name="dr_total" value="" class="dr_total" style="background-color:#000000;color:#ffffff;font-weight:bold" readonly="readonly" /><span class="invalid-feedback"></span></div>                </td>
+                <td class="p-3 bg-secondary">
+                  <div class="pt-2"><label class="control-label" for="cr_total"></label><input type="number" id="cr_total" name="cr_total" value="" class="cr_total" style="background-color:#000000;color:#ffffff;font-weight:bold" readonly="readonly" /><span class="invalid-feedback"></span></div>                </td>
+                <td class="p-3"><span class="recalculate" escape="false"><i class="fas fa-retweet"></i></span></td>
+              </tr>
+              <tr class="">
+                <td class=""></td>
+                <td></td>
+                <td></td>
+                <td class="text-center font-weight-bold text-white p-3 bg-secondary">Difference</td>
+                <td class="p-3 bg-secondary">
+                  <div class="pt-2"><label class="control-label" for="dr_diff"></label><input type="number" id="dr_diff" name="dr_diff" value="" class="dr_diff" style="background-color:#000000;color:#ffffff;font-weight:bold" readonly="readonly" /><span class="invalid-feedback"></span></div>                </td>
+                <td class="p-3 bg-secondary">
+                  <div class="pt-2"><label class="control-label" for="cr_diff"></label><input type="number" id="cr_diff" name="cr_diff" value="" class="cr_diff" style="background-color:#000000;color:#ffffff;font-weight:bold" readonly="readonly" /><span class="invalid-feedback"></span></div>                </td>
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </fieldset>
+      <!-- Submit and Cancel Buttons Row -->
+      <div class="row mt-5">
+        <div class="col-md-12 text-center text-white">
+          <a href="./vouchers" class="btn btn-large btn-danger mr-5 px-5 text-uppercase font-weight-bold">Cancel</a>
+          <input type="submit" value="Save" class="btn btn-large btn-info ml-5 px-5 text-uppercase font-weight-bold" />        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // $(".project_id").trigger('change');
+    // Start  Javascript
+    // EDIT  Section
+
+    // voucher_bgtline_counter.value = $(".project_id").length;
+    voucher_bgtline_counter.value = $(".project_budgetline_ref_id").length;
+
+    $('.project_id').select2()
+    $(".project_id").on('change', function() {
+      var project_id = this.value;
+      var tr = $(this).parent().parent().parent();
+      $.ajax({
+        url: "./vouchers/loadPrjBgtlinesByProject",
+        method: 'POST',
+        data: 'project_id=' + project_id,
+        success: function(data) {
+          // console.log(data);          
+          tr.find(".project_budgetline_ref_id").empty();
+
+          data.budgetlines.forEach(function(budgetline) {
+            tr.find(".project_budgetline_ref_id").append('<option value="' + budgetline.id + '">' + budgetline.name + '</option>');
+          })
+
+        }
+      })
+      // tr.find(".project_budgetline_ref_id").trigger('change');
+
+    })
+
+
+    $('.project_budgetline_ref_id').select2()
+    $('.voucher_budgetline_gl_id').select2()
+
+    $(".project_budgetline_ref_id").on('change', function(e) {
+
+      var project_budgetline_ref_id = this.value;
+      var tr = $(this).parent().parent().parent();
+      $.ajax({
+
+        url: "./vouchers/getbudgetline",
+        method: "POST",
+        data: {
+          id: project_budgetline_ref_id
+        },
+        success: function(data) {
+          console.log(data);
+          tr.find(".budgetline_balance").val(data["budgeted_amount"]);
+          tr.find(".amount").val(0.00);
+          // calculate(0, 0);
+        }
+      })
+    })
+    //Initialize Select2 Elements
+    // $('.project_budgetline_ref_id').select2() //    Edit ends here
+    // Add new starts here
+    $(document).on('click', '.btnaddbudgetlines', function() {
+      var Itemcounterr = parseInt(voucher_bgtline_counter.value);
+      Itemcounterr++;
+      voucher_bgtline_counter.value = Itemcounterr;
+
+      var html = '';
+
+      html += '<tr>';
+      //requisition_item_id Make sure the value of the name attribute is referenced correctly and as per the forloop in respective Ctroller
+      html +=
+        '<td><input type="hidden" id="voucher_budgetline_id" name="voucher_budgetline_id_' + Itemcounterr + '" value=""/></td>';
+      // Project
+      html +=
+        '<td><div class="form-group"><label for="project_id_'+Itemcounterr+'" class="control-label"></label><select id="project_id_'+Itemcounterr+'" name="project_id_'+Itemcounterr+'"  class="form-control project_id" style="width:200px"><option value="" selected="selected">-Select Project-</option><option value="1">DX.0101-DTM::DTM-Mobility Tracking and Multi-Sectoral Assessment</option></select><span class="invalid-feedback"></span></div> </td>';
+
+      // Budgetline
+      html +=
+        '<td><div class="form-group"><label for="project_budgetline_ref_id_'+Itemcounterr+'" class="control-label"></label><select id="project_budgetline_ref_id_'+Itemcounterr+'" name="project_budgetline_ref_id_'+Itemcounterr+'"  class="form-control project_budgetline_ref_id" style="width:200px"></select><span class="invalid-feedback"></span></div> </td>';
+
+      // budgetline_balance
+      html +=
+        '<td> <div><label class="control-label" for="budgetline_balance_'+Itemcounterr+'"></label><input type="number" id="budgetline_balance_'+Itemcounterr+'" name="budgetline_balance_'+Itemcounterr+'" value="" class="form-control  budgetline_balance" step="any" readonly="readonly" /><span class="invalid-feedback"></span></div> </td>';
+
+      // voucher_budgetline_gl_id Div
+      html +=
+        '<td><div class="form-group"><label for="voucher_budgetline_gl_id_'+Itemcounterr+'" class="control-label"></label><select id="voucher_budgetline_gl_id_'+Itemcounterr+'" name="voucher_budgetline_gl_id_'+Itemcounterr+'"  class="form-control voucher_budgetline_gl_id" style="width:200px"><option value="" selected="selected">-Select GlAccount-</option><option value="1">Motor Vehicles</option><option value="2">Furniture&amp;Fittings</option><option value="3">Equity Bank</option><option value="4">Long Term Liabilities</option><option value="5">Short Term Liabilities</option><option value="6">Premier Bank 002</option><option value="7">Premier Bank 003</option><option value="8">Salaries and Employee Expenses</option><option value="9">Beneficiary Supplies &amp; Support</option><option value="10">Non Current Asset 3</option><option value="11">Premier Bank 004</option><option value="12">Premier Bank 005</option><option value="13">Premier Bank 006</option><option value="14">Premier Bank 007</option><option value="15">Premier Bank 008</option><option value="16">Premier Bank 009</option><option value="17">Premier Bank 010</option><option value="18">Premier Bank 011</option><option value="19">Bank Charges</option><option value="20">Vehicle Rental Cost</option><option value="21">Stationery Costs</option><option value="22">Utilities(Water and Electricity)</option><option value="23">Communication &amp; Internet Costs</option><option value="24">IEC, Visibility and Branding Costs</option><option value="25">Revenue &amp; Disbursements</option></select><span class="invalid-feedback"></span></div> </td>'; // amount input Div
+      html +=
+        '<td><div><label class="control-label" for="amount_'+Itemcounterr+'"></label><input type="number" id="amount_'+Itemcounterr+'" name="amount_'+Itemcounterr+'" value="" class="form-control amount" step="any" ="" /><span class="invalid-feedback"></span></div> </td > ';
+
+      // btnremoveProduct Div
+      html +=
+        '<td><div class= "pt-4"><center><button type="button" name="removebudgetline_' + Itemcounterr + '" class="btn btn-danger btn-sm btnremovebudgetline"><span class="fas fa-times"></span></button><center></td></div></center>';
+      html +=
+        '</tr>';
+      $('#budgetlinestable').append(html);
+      $('.project_id').select2()
+
+      $(".project_id").on('change', function() {
+        var project_id = this.value;
+        var tr = $(this).parent().parent().parent();
+        $.ajax({
+          url: "./vouchers/loadPrjBgtlinesByProject",
+          method: 'POST',
+          data: 'project_id=' + project_id,
+          success: function(data) {
+            // console.log(data);          
+            tr.find(".project_budgetline_ref_id").empty();
+
+            data.budgetlines.forEach(function(budgetline) {
+              tr.find(".project_budgetline_ref_id").append('<option value="' + budgetline.id + '">' + budgetline.name + '</option>');
+            })
+
+          }
+        })
+        // tr.find(".project_budgetline_ref_id").trigger('change');
+
+      })
+      //Initialize Select2 Elements
+      $('.project_budgetline_ref_id').select2()
+      $('.voucher_budgetline_gl_id').select2()
+      $(".project_budgetline_ref_id").on('change', function() {
+        var project_budgetline_ref_id = this.value;
+        var tr = $(this).parent().parent().parent();
+        $.ajax({
+          url: "./vouchers/getbudgetline",
+          method: "POST",
+          data: {
+            id: project_budgetline_ref_id
+          },
+          success: function(data) {
+            console.log(data);
+            tr.find(".budgetline_balance").val(data["budgeted_amount"]);
+            tr.find(".amount").val(0.00);
+            // calculate(0, 0);
+          }
+        })
+      })
+      //Initialize Select2 Elements
+
+    }) // btnaddbudgetline end here
+    $(document).on('click', '.btnremovebudgetline', function() {
+      $(this).closest('tr').remove();
+    }) // btnremove end here
+
+    /* javascript floating point operations */
+    var jsFloatOps = function(param1, param2, op) {
+      param1 = param1 * 100;
+      param2 = param2 * 100;
+      param1 = param1.toFixed(0);
+      param2 = param2.toFixed(0);
+      param1 = Math.floor(param1);
+      param2 = Math.floor(param2);
+      var result = 0;
+      if (op == '+') {
+        result = param1 + param2;
+        result = result / 100;
+        return result;
+      }
+      if (op == '-') {
+        result = param1 - param2;
+        result = result / 100;
+        return result;
+      }
+      if (op == '!=') {
+        if (param1 != param2)
+          return true;
+        else
+          return false;
+      }
+      if (op == '==') {
+        if (param1 == param2)
+          return true;
+        else
+          return false;
+      }
+      if (op == '>') {
+        if (param1 > param2)
+          return true;
+        else
+          return false;
+      }
+      if (op == '<') {
+        if (param1 < param2)
+          return true;
+        else
+          return false;
+      }
+    }
+    // dr_total and cr_total calculations starts here
+    // $("#glaccounttable").on("keyup change", ".amount_debit", function() {
+    $("#glaccounttable").on("change", ".amount_debit", function() {
+      var drTotal = 0;
+      $("table tr .amount_debit").each(function() {
+        var curDr = $(this).prop('value');
+        curDr = parseFloat(curDr);
+        if (isNaN(curDr))
+          curDr = 0;
+        drTotal = jsFloatOps(drTotal, curDr, '+');
+      });
+      $("table tr #dr_total").val(drTotal);
+      var crTotal = 0;
+      $("table tr .amount_credit").each(function() {
+        var curCr = $(this).prop('value');
+        curCr = parseFloat(curCr);
+        if (isNaN(curCr))
+          curCr = 0;
+        crTotal = jsFloatOps(crTotal, curCr, '+');
+      });
+      $("table tr #cr_total").val(crTotal);
+      if (jsFloatOps(drTotal, crTotal, '==')) {
+        $("table tr #dr_total").css("background-color", "#28a745");
+        $("table tr #cr_total").css("background-color", "#28a745");
+        $("table tr #dr_diff").val("");
+        $("table tr #cr_diff").val("");
+      } else {
+        $("table tr #dr_total").css("background-color", "#d92748");
+        $("table tr #cr_total").css("background-color", "#d92748");
+        if (jsFloatOps(drTotal, crTotal, '>')) {
+          $("table tr #dr_diff").val("");
+          $("table tr #cr_diff").val(jsFloatOps(drTotal, crTotal, '-'));
+        } else {
+          $("table tr #dr_diff").val(jsFloatOps(crTotal, drTotal, '-'));
+          $("table tr #cr_diff").val("");
+        }
+      }
+    });
+    $("#glaccounttable").on("change", ".amount_credit", function() {
+      var drTotal = 0;
+      $("table tr .amount_debit").each(function() {
+        var curDr = $(this).prop('value')
+        curDr = parseFloat(curDr);
+        if (isNaN(curDr))
+          curDr = 0;
+        drTotal = jsFloatOps(drTotal, curDr, '+');
+      });
+      $("table tr #dr_total").val(drTotal);
+      var crTotal = 0;
+      $("table tr .amount_credit").each(function() {
+        var curCr = $(this).prop('value')
+        curCr = parseFloat(curCr);
+        if (isNaN(curCr))
+          curCr = 0;
+        crTotal = jsFloatOps(crTotal, curCr, '+');
+      });
+      $("table tr #cr_total").val(crTotal);
+      if (jsFloatOps(drTotal, crTotal, '==')) {
+        $("table tr #dr_total").css("background-color", "#28a745");
+        $("table tr #cr_total").css("background-color", "#28a745");
+        $("table tr #dr_diff").val("");
+        $("table tr #cr_diff").val("");
+      } else {
+        $("table tr #dr_total").css("background-color", "#d92748");
+        $("table tr #cr_total").css("background-color", "#d92748");
+        if (jsFloatOps(drTotal, crTotal, '>')) {
+          $("table tr #dr_diff").val("");
+          $("table tr #cr_diff").val(jsFloatOps(drTotal, crTotal, '-'));
+        } else {
+          $("table tr #dr_diff").val(jsFloatOps(crTotal, drTotal, '-'));
+          $("table tr #cr_diff").val("");
+        }
+      }
+    });
+    // dr_total and cr_total calculations ends here
+    voucher_gl_counter.value = $(".glaccount_id").length;
+    $('.glaccount_id').select2()
+    $(".glaccount_id").on('change', function(e) {
+      // $("#glaccounttable").on('change', '.glaccount_id', function(e) {
+      var glaccount_id = this.value;
+      var tr = $(this).parent().parent().parent();
+      if ($(this).val() == "") {
+        /* Reset and disable dr and cr amount */
+        tr.find(".amount_debit").prop('value', "");
+        tr.find(".amount_credit").prop('value', "");
+        tr.find(".amount_debit").prop('readonly', 'readonly');
+        tr.find(".amount_credit").prop('readonly', 'readonly');
+      } else {
+        /* Enable dr and cr amount and trigger Dr/Cr change */
+        tr.find(".amount_debit").prop('readonly', '');
+        tr.find(".amount_credit").prop('readonly', '');
+        tr.find(".entry_type").trigger('change');
+      }
+      /* Trigger dr and cr change */
+      tr.find(".amount_debit").trigger('change');
+      tr.find(".amount_credit").trigger('change');
+      $.ajax({
+        url: "./vouchers/getglaccount",
+        method: "POST",
+        data: {
+          id: glaccount_id
+        },
+        success: function(data) {
+          //console.log(data);
+          tr.find(".glaccount_amount").val(data["amount"]);
+          // tr.find(".amount_debit").val("");
+          // tr.find(".amount_credit").val("");
+
+        }
+      })
+      // /* Recalculate Total */
+      // $('.amount_debit:first').trigger('change');
+      // $('.amount_credit:first').trigger('change');
+    });
+    $(document).on('click', '.btnadd', function() {
+      var counterr = parseInt(voucher_gl_counter.value);
+      counterr++;
+      voucher_gl_counter.value = counterr;
+      var html = '';
+      html += '<tr>';
+      //trxgl_id Make sure the value of the name attribute is referenced correctly and as per the forloop in respective Ctroller
+      html +=
+        '<td><input type="hidden" class="form-control  trxgl_id" name="voucher_gl_id_' + counterr +
+        '" readonly value=""></td>';
+      // glaccount_id
+      html +=
+        '<td><div><label for="gl_account_id_'+counterr+'" class="control-label"></label><select id="gl_account_id_'+counterr+'" name="gl_account_id_'+counterr+'"  class="form-control  glaccount_id" style="width:200px"><option value="" selected="selected">-Select GlAccount-</option><option value="1">Motor Vehicles</option><option value="2">Furniture&amp;Fittings</option><option value="3">Equity Bank</option><option value="4">Long Term Liabilities</option><option value="5">Short Term Liabilities</option><option value="6">Premier Bank 002</option><option value="7">Premier Bank 003</option><option value="8">Salaries and Employee Expenses</option><option value="9">Beneficiary Supplies &amp; Support</option><option value="10">Non Current Asset 3</option><option value="11">Premier Bank 004</option><option value="12">Premier Bank 005</option><option value="13">Premier Bank 006</option><option value="14">Premier Bank 007</option><option value="15">Premier Bank 008</option><option value="16">Premier Bank 009</option><option value="17">Premier Bank 010</option><option value="18">Premier Bank 011</option><option value="19">Bank Charges</option><option value="20">Vehicle Rental Cost</option><option value="21">Stationery Costs</option><option value="22">Utilities(Water and Electricity)</option><option value="23">Communication &amp; Internet Costs</option><option value="24">IEC, Visibility and Branding Costs</option><option value="25">Revenue &amp; Disbursements</option></select><span class="invalid-feedback"></span></div></td>';
+      // glaccount_amount
+      html +=
+        '<td> <div><label class="control-label" for="glaccount_amount_'+counterr+'"></label><input type="number" id="glaccount_amount_'+counterr+'" name="glaccount_amount_'+counterr+'" value="" class="form-control  glaccount_amount" step="any" readonly="readonly" /><span class="invalid-feedback"></span></div> </td>';
+      // entry_type
+      html +=
+        '<td><div class=""><label for="entry_type_'+counterr+'" class="control-label"></label><select id="entry_type_'+counterr+'" name="entry_type_'+counterr+'"  class="form-control  entry_type"><option value="D">Debit</option><option value="C">Credit</option></select><span class="invalid-feedback"></span></div> </td>';
+      // Amount Debit input Div
+      html +=
+        '<td> <div><label class="control-label" for="amount_debit_'+counterr+'"></label><input type="text" id="amount_debit_'+counterr+'" name="amount_debit_'+counterr+'" value="" class="form-control  amount_debit" step="any" /><span class="invalid-feedback"></span></div> </td>';
+      // Amount Credit input Div
+      html +=
+        '<td><div><label class="control-label" for="amount_credit_'+counterr+'"></label><input type="text" id="amount_credit_'+counterr+'" name="amount_credit_'+counterr+'" value="" class="form-control  amount_credit" step="any" /><span class="invalid-feedback"></span></div> </td > ';
+      // btnremove Div
+      html +=
+        '<td> <div class= "pt-4"><center><button type="button" name="remove_' + counterr +
+        '" class="btn btn-danger btn-sm btnremove"><span class="fas fa-times"></span></button><center></td></div></center>';
+      html +=
+        '</tr>';
+      $('#glaccounttable').append(html);
+      //Initialize Select2 Elements
+      $('.glaccount_id').select2()
+      $(".glaccount_id").on('change', function() {
+        // $("#glaccounttable").on('change', '.glaccount_id', function() {
+        var glaccount_id = this.value;
+        var tr = $(this).parent().parent().parent();
+        if ($(this).val() == "") {
+          /* Reset and disable dr and cr amount */
+          tr.find(".amount_debit").prop('value', "");
+          tr.find(".amount_credit").prop('value', "");
+          tr.find(".amount_debit").prop('readonly', 'readonly');
+          tr.find(".amount_credit").prop('readonly', 'readonly');
+        } else {
+          /* Enable dr and cr amount and trigger Dr/Cr change */
+          tr.find(".amount_debit").prop('readonly', '');
+          tr.find(".amount_credit").prop('readonly', '');
+          tr.find(".entry_type").trigger('change');
+        }
+        /* Trigger dr and cr change */
+        tr.find(".amount_debit").trigger('change');
+        tr.find(".amount_credit").trigger('change');
+        $.ajax({
+          url: "./vouchers/getglaccount",
+          method: "POST",
+          data: {
+            id: glaccount_id
+          },
+          success: function(data) {
+            console.log(data);
+            tr.find(".glaccount_amount").val(data["amount"]);
+            // tr.find(".amount_debit").val("");
+            // tr.find(".amount_credit").val("");;
+            // calculate(0, 0);
+          }
+        })
+      })
+      /* Recalculate Total */
+      // $('.amount_debit:first').trigger('change');
+      // $('.amount_credit:first').trigger('change');
+    }); // btnadd end here
+    $(document).on('click', '.btnremove', function() {
+      $(this).closest('tr').remove();
+      /* Recalculate Total */
+      $('.amount_debit:first').trigger('change');
+      $('.amount_credit:first').trigger('change');
+    }); // btnremove end here
+    /* Dr - Cr dropdown changed */
+    $("#glaccounttable").on('change', '.entry_type', function() {
+      var tr = $(this).parent().parent().parent();
+      // var drValue = tr.find(".amount_debit").val();
+      var drValue = tr.find(".amount_debit").prop('value');
+      // var crValue = tr.find(".amount_credit").val();
+      var crValue = tr.find(".amount_credit").prop('value');
+      if (tr.find(".glaccount_id").val() == "0") {
+        return;
+      }
+      drValue = parseFloat(drValue);
+      if (isNaN(drValue))
+        drValue = 0;
+      crValue = parseFloat(crValue);
+      if (isNaN(crValue))
+        crValue = 0;
+      if ($(this).prop('value') == "D") {
+        if (drValue == 0 && crValue != 0) {
+          tr.find(".amount_debit").prop('value', crValue);
+        }
+        tr.find(".amount_credit").prop('value', "0.00");
+        tr.find(".amount_credit").prop('readonly', 'readonly');
+        tr.find(".amount_debit").prop('readonly', '');
+      } else {
+        if (crValue == 0 && drValue != 0) {
+          tr.find(".amount_credit").prop('value', drValue);
+        }
+        tr.find(".amount_debit").prop('value', "0.00");
+        tr.find(".amount_debit").prop('readonly', 'readonly');
+        tr.find(".amount_credit").prop('readonly', '');
+      }
+      /* Recalculate Total */
+      $('.amount_debit:first').trigger('change');
+      $('.amount_credit:first').trigger('change');
+    });
+    /* On page load initiate all triggers */
+    $('.entry_type').trigger('change');
+    // $('.glaccount_id').trigger('change');
+    // $('.dr_item:first').trigger('change');
+    // $('.cr_item:first').trigger('change'); 
+    // $('.dr_item').trigger('change');
+    // $('.cr_item').trigger('change');
+
+  });
+</script>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>Developed by
+        <a class="footer-link" href="http://www.linchpin-ea.com" target="_blank"> CPA Abdihakim A. Gureh</a> |
+        All
+        Rights Reserved. © 2018-2023
+      </p>
+
+    </footer>
+  </div>
+  <!-- <script src="./js/popper.min.js"></script> -->
+  <!-- <script src="./js/bootstrap.min.js"></script> -->
+  <!-- <script src="./js/jquery.slimscroll.min.js"></script> -->
+  <script src="./js/masterlayout.js?v=0.173"></script>
+  <script src="./js/alertMsg.min.js?v=0.173"></script>
+  <!-- <script src="./js/jquery-ui/jquery-ui.min.js"></script> -->
+
+
+  <script>
+    // function 1 for top navbar dropdown
+    //Below are IFIS functions i.e Imediately invoked function expressions(they usually have a parenthesis at the end)
+    (function() {
+      var topnavpath = window.location.href;
+      // console.log('topnavpath', topnavpath);
+      $(".dropdown-item").each(function() {
+        // var HostExtension = 'http://198.74.59.231';
+        var HostExtension = 'http://localhost';
+        var topnavhref = $(this).attr('href');
+        topnavhref = HostExtension + topnavhref;
+        // console.log('topnav', topnavhref);
+        if (topnavpath === decodeURIComponent(topnavhref)) {
+          $(this).addClass('activelinkclass');
+          var parent = $(this).closest('.dropdown-list');
+          var grandparent = $(this).closest('li.topnav-item.dropdown');
+
+          // parent.addClass('show');
+          // grandparent.addClass('show');
+          $(grandparent).find('.topnav-link').first().addClass('activelinkclass');
+          // console.log('parent', parent);
+          // console.log('grandparent', grandparent);
+        };
+      });
+    }());
+
+
+    (function() {
+      var sidenavpath = window.location.href;
+      // console.log('sidenavpath', sidenavpath);
+      $(".sub_link").each(function() {
+        // var HostExtension = 'http://198.74.59.231';
+        var HostExtension_aside = 'http://localhost';
+        var sidenavhref = $(this).attr('href');
+        sidenavhref = HostExtension_aside + sidenavhref;
+        // console.log('sidenavhref', sidenavhref);
+        if (sidenavpath === decodeURIComponent(sidenavhref)) {
+          $(this).addClass('activelinkclass');
+          var parent = $(this).closest('ul');
+          parent.toggleClass('d-none');
+          $(this).closest('ul').toggleClass('d-none');
+          var grandparent = $(this).closest('li.sidenav-item');
+
+          $(grandparent).find('.sidenav-link').first().addClass('activelinkclass');
+          // console.log('parent', parent);
+          // console.log('grandparent', grandparent);
+        };
+      });
+    }());
+  </script>
+
+
+</body>
+
+</html>
