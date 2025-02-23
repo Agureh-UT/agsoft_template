@@ -107,7 +107,9 @@ select {
   align-items: center;
   text-transform: uppercase;
   padding-inline: 10px;
+  
 }
+
 .pane1_agsoftLogo {
   display: flex;
   align-items: center;
@@ -156,6 +158,7 @@ select {
   cursor: pointer;
   display: none;
 }
+
 .topnav .burger {
   font-size: 1.5rem;
   box-shadow: 0 0 1px #343434;
@@ -181,7 +184,7 @@ select {
   margin: 0.15rem;
 }
 .topnav-link {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 900;
   padding: 1rem 0.5rem;
   color: var(--white);
@@ -203,36 +206,167 @@ select {
 /************************* 
       dropdown
   *************************/
+/* Dropdown List Styles */
 .dropdown-list {
-  display: none;
+  display: none; 
   position: absolute;
-  top: 100%;
-  background-color: #fff;
-  border-radius: 3px;
-  width: 100%;
-  padding: 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 900;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  top: 100%; 
+  background-color: #fff; 
+  border-radius: 5px; 
+  width: 100%; 
+  padding: 0.5rem 0; 
+  font-size: 1.2rem; 
+  font-weight: 900; 
+  border: 1px solid #ccc; 
+  box-shadow: 0 2px 8px rgba(236, 78, 78, 0.1); /* Softer shadow */
+  z-index: 1000; /* Ensure it sits above other elements */
 }
+
+/* Show dropdown */
 .dropdown-list.show {
-  display: block;
+  display: block; /* Show when the class is added */
 }
+
+/* Dropdown Links */
 .dropdown-list a {
-  background-color: var(--main-color);
-  color: var(--white);
-  border: 3px solid #cdcdcd;
-  border-radius: 5px;
-  text-decoration: none;
-  display: block;
-  padding: 0.5rem 1rem;
-  white-space: nowrap;
+  background-color: var(--main-color); /* Main color background */
+  color: var(--white); /* White text color */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Block display for full width */
+  padding: 0.5rem 1rem; /* Padding for clickable area */
+  margin: 0.25rem 0; /* Add vertical margin for spacing between items */
+  white-space: nowrap; /* Prevent text wrapping */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
 }
+
+/* Hover and Active Link Styles */
 .dropdown-list a:hover,
-.dropdown-list>a.activelinkclass {
-  background-color: var(--secondary);
+.dropdown-list a.activelinkclass {
+  background-color: var(--secondary); /* Change background on hover */
+  color: #fff; /* Ensure text is white on hover */
+  transform: scale(1.02); /* Slightly enlarge on hover */
 }
+
+/* Additional Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .dropdown-list {
+      font-size: 0.9rem; /* Slightly smaller font on mobile */
+  }
+
+  .dropdown-list a {
+      padding: 0.5rem; /* Adjust padding for mobile */
+  }
+}
+.icon {
+  font-size: 3rem; /* Adjust the size as needed */
+  color: #f1a10c; /* Change this to any color you like (e.g., orange) */
+  transition: color 0.3s, transform 0.2s;
+  margin-right: 0.9rem; /* Smooth color transition and scale effect */
+}
+
+.icon:hover {
+  color: #2185d0; /* Darker shade on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+
+.icon2{
+  font-size: 1.9rem; /* Adjust the size as needed */
+  color: #8cee4b; /* Change this to any color you like (e.g., orange) */
+  transition: color 0.3s, transform 0.2s;
+  margin-right: 0.9rem; /* Smooth color transition and scale effect */
+}
+
+
+
+.icon3{
+  font-size: 2.9rem; /* Adjust the size as needed */
+  color: #145cad; /* Change this to any color you like (e.g., orange) */
+  transition: color 0.3s, transform 0.2s;
+  margin-right: 0.9rem; /* Smooth color transition and scale effect */
+}
+
+
+.custom-topnav {
+  display: flex;
+  justify-content: space-between; /* Ensures space between items */
+  align-items: center; /* Centers items vertically */
+  padding: 0 20px; /* Adds some padding for aesthetics */
+}
+
+.custom-topnav-list {
+  display: flex; /* Makes the list items display in a row */
+  list-style: none; /* Removes bullet points */
+  margin: 0; /* Resets margin */
+  padding: 0; /* Resets padding */
+}
+
+.custom-notification {
+  position: relative;
+  margin-left: auto !important; /* Pushes the notification to the far right */
+}
+
+.custom-notification-link {
+  text-decoration: none;
+  color: #333; /* Change this to your desired color */
+  font-size: 1.5rem; /* Adjust the size */
+  position: relative;
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+}
+
+.custom-notification-count {
+  position: absolute;
+  top: -5px; /* Adjust the position as needed */
+  right: -10px; /* Adjust the position as needed */
+  background-color: transparent; /* No background */
+  color: red; /* Change this to your desired color */
+  font-size: 1.3rem; /* Adjust the font size */
+  font-weight: bold; /* Make it bold */
+}
+
+.custom-notification-dropdown {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 100%; /* Position below the bell */
+  right: 0;
+  width: 300px; /* Set a fixed width */
+  z-index: 1000;
+  padding: 0.5rem 0;
+  background-color: rgb(199, 200, 240); /* Background color for dropdown */
+  border: 1px solid #ccc; /* Optional border for dropdown */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.custom-notification:hover .custom-notification-dropdown {
+  display: block; /* Show on hover */
+  
+}
+
+.custom-notification-message {
+  padding: 0.5rem 1rem;
+  color: #1a1919; /* Change to your desired color */
+  border-bottom: 1px solid #181717;
+  
+   /* Optional: for separation */
+}
+
+.custom-notification-message:last-child {
+  border-bottom: none; /* Remove border from last message */
+}
+
+.custom-notification-message:hover {
+  background-color: #f9f9f9; /* Light background on hover (optional) */
+}
+
+
+
+
+
+
+
 .wrapper {
   grid-area: main;
   display: grid;
@@ -954,4 +1088,92 @@ input.form-control:read-only {
   .dropdown-list {
     position: relative;
   }
+}
+
+
+
+.pdf{
+  font-size: 2.1rem; 
+  color: #48b708;
+}
+
+
+
+/*imran*/
+
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 15px; 
+  border-radius: 25px;
+  border: 2px solid #085bb7; 
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  border-color: #2e44a7;
+  box-shadow: 0px 0px 8px rgba(156, 36, 131, 0.5);
+}
+
+.search-btn {
+  position: absolute;
+  right: 23px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #085bb7;
+  cursor: pointer;
+  font-size: 1.9rem;
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+.date-input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+
+input[type="date"] {
+  appearance: none;
+  width: 100%;
+  padding: 1rem 3.5rem 1rem 1.2rem;
+  border: 2px solid rgba(0, 123, 255, 0.6);
+  border-radius: 12px;
+  background: #ffffff;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+input[type="date"]:hover {
+  border-color: rgba(0, 123, 255, 1);
+}
+input[type="date"]:focus {
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+  border-color: rgba(0, 123, 255, 1);
+}
+
+.date-input-wrapper::after {
+  content: "\1F4C5"; 
+  font-size: 3rem; 
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #007bff;
+  opacity: 0.8;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, transform 0.2s;
+}
+
+.date-input-wrapper:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
 }

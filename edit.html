@@ -72,14 +72,20 @@
       <!-- </div> -->
     </li>
   </ul>
-
   <nav class="topnav" id="topnav">
     <span class="sidenav-toggler"><i class="fa fa-bars"></i></span>
     <i class="fas fa-bars burger" id=""></i>
     <ul class="topnav-list">
-              <li class="topnav-item"><a class="topnav-link " href="./dashboards/index"><span> <i class="fas fa-tachometer-alt"></i> </span> DASHBOARD</a></li>
+      <li class="topnav-item">
+        <a class="topnav-link" href="./dashboards/index">
+          <span><i class="fas fa-tachometer-alt icon"></i></span>
+          DASHBOARD
+        </a>
+      </li>
+      
+      
                     <li class="topnav-item dropdown">
-          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-desktop"></i> eSYSTEM <i class="fas fa-caret-down"></i></a>
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-desktop icon"></i> eSYSTEM <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-list cust-drop ">
                                           <a class="dropdown-item " href="./adminclients/index">Clients</a>
                                                         <a class="dropdown-item " href="./projects/index">Projects</a>
@@ -91,7 +97,7 @@
                                     </div>
         </li>
                     <li class="topnav-item dropdown">
-          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-coins"></i> eFINANCE <i class="fas fa-caret-down"></i></a>
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-coins  icon"></i> eFINANCE <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-list cust-drop ">
                                           <a class="dropdown-item " href="./vouchers/index">Vouchers</a>
                                                         <a class="dropdown-item " href="./vouchers/review">Review Vouchers</a>
@@ -99,19 +105,19 @@
                                     </div>
         </li>
                     <li class="topnav-item dropdown">
-          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-dolly"></i> ePROCUREMENT <i class="fas fa-caret-down"></i></a>
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-dolly icon"></i> ePROCUREMENT <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-list cust-drop ">
                                           <a class="dropdown-item " href="./requisitions/index">Requisitions</a>
                                                         <a class="dropdown-item " href="./requisitions/review">Requisitions Review</a>
                                                         <a class="dropdown-item " href="./requisitions/approve">Requisitions Approval</a>
-                                                        <a class="dropdown-item " href="./purchaseorders/index">PurchaseOrders</a>
+                                                        <a class="dropdown-item activelinkclass" href="./purchaseorders/index">PurchaseOrders</a>
                                                         <a class="dropdown-item " href="./purchaseorders/review">PurchaseOrders Review</a>
                                                         <a class="dropdown-item " href="./purchaseorders/approve">PurchaseOrders Approval</a>
                                     </div>
         </li>
-                    <li class="topnav-item"><a class="topnav-link " href="./admindashboard/dashboard"><span> <i class="fas fa-tachometer-alt"></i> </span> ADMINPANEL</a></li>
+                    <li class="topnav-item"><a class="topnav-link " href="./admindashboard/dashboard"><span> <i class="fas fa-tachometer-alt icon"></i> </span> ADMINPANEL</a></li>
                           <li class="topnav-item dropdown">
-          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-user"></i> Hello: System Admin <i class="fas fa-caret-down"></i></a>
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-user icon"></i> Hello: System Admin <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-list cust-drop dropdown-menu-right">
                                           <a class="dropdown-item " href="./register/logout">Logout</a>
                                                         <a class="dropdown-item " href="./useradmin/passwordupdate">Update Password</a>
@@ -194,21 +200,21 @@
       <nav class="sidenav" id="sidenav">
   <div class="sidenav-item">
     <a href="#" class="sidenav-toggler-link sidenav-toggler">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars icon2"></i>
       <span>Resize</span>
     </a>
   </div>
   <ul class="sidenav-list">
             <li class="sidenav-item">
           <a href="./dashboards/index" class="sidenav-link ">
-            <i class="fas fa-tachometer-alt"></i>
+            <i class="fas fa-tachometer-alt icon2 "></i>
             <span>DASHBOARD</span>
           </a>
         </li>
               <li class="sidenav-item">
-          <a href="#" class="sidenav-link"><i class="fas fa-desktop"> </i>
+          <a href="#" class="sidenav-link"><i class="fas fa-desktop icon2"> </i>
             <span>
-              eSYSTEM              <i class="fas fa-angle-down"></i>
+              eSYSTEM              <i class=" fas fa-angle-down "></i>
             </span>
           </a>
           <ul class="d-none">
@@ -243,7 +249,7 @@
                       </ul>
         </li>
               <li class="sidenav-item">
-          <a href="#" class="sidenav-link"><i class="fas fa-coins"> </i>
+          <a href="#" class="sidenav-link"><i class="fas fa-coins icon2"> </i>
             <span>
               eFINANCE              <i class="fas fa-angle-down"></i>
             </span>
@@ -264,7 +270,7 @@
                       </ul>
         </li>
               <li class="sidenav-item">
-          <a href="#" class="sidenav-link"><i class="fas fa-dolly"> </i>
+          <a href="#" class="sidenav-link"><i class="fas fa-dolly icon2"> </i>
             <span>
               ePROCUREMENT              <i class="fas fa-angle-down"></i>
             </span>
@@ -283,7 +289,7 @@
                   Requisitions Approval                </a>
               </li>
                           <li>
-                <a href="./purchaseorders/index" class="sub_link ">
+                <a href="./purchaseorders/index" class="sub_link activelinkclass">
                   PurchaseOrders                </a>
               </li>
                           <li>
@@ -298,7 +304,7 @@
         </li>
               <li class="sidenav-item">
           <a href="./admindashboard/dashboard" class="sidenav-link ">
-            <i class="fas fa-tachometer-alt"></i>
+            <i class="fas fa-tachometer-alt icon2"></i>
             <span>ADMINPANEL</span>
           </a>
         </li>
@@ -393,7 +399,7 @@
   </ul>
   <div class="sidenav-item">
     <a href="#" class="sign-out">
-      <i class="fas fa-sign-out-alt"></i>
+      <i class="fas fa-sign-out-alt icon-signout icon2"></i>
       <span>Sign Out</span>
     </a>
   </div>

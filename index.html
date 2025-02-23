@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <title>AG-Soft ERP</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
       <!-- <link rel="stylesheet" href="./css/customBootrap.css?v=0.173"> -->
     <!-- <link rel="stylesheet" href="./css/custom2.css?v=0.173"> -->
     <!-- <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8"> -->
@@ -62,11 +62,20 @@
       </span>
       <!-- </div> -->
     </li>
+    <nav class="custom-topnav" id="custom-topnav">
+      
+    
+      
+  
     <li class="pane1_logout">
       <!-- <div class=""> -->
-      <i class="fas fa-user-circle fa-3x"></i>
+      <i class="fas fa-user-circle fa-3x icon3"></i>
 
-      <a href="./register/logout">LOGOUT</a>
+      <a href="./register/logout">LOGOUT 
+
+
+        
+      </a>
       <!-- </div> -->
     </li>
   </ul>
@@ -75,9 +84,16 @@
     <span class="sidenav-toggler"><i class="fa fa-bars"></i></span>
     <i class="fas fa-bars burger" id=""></i>
     <ul class="topnav-list">
-              <li class="topnav-item"><a class="topnav-link " href="./dashboards/index"><span> <i class="fas fa-tachometer-alt"></i> </span> DASHBOARD</a></li>
+      <li class="topnav-item">
+        <a class="topnav-link" href="./dashboards/index">
+          <span><i class="fas fa-tachometer-alt icon"></i></span>
+          DASHBOARD
+        </a>
+      </li>
+      
+      
                     <li class="topnav-item dropdown">
-          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-desktop"></i> eSYSTEM <i class="fas fa-caret-down"></i></a>
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-desktop icon"></i> eSYSTEM <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-list cust-drop ">
                                           <a class="dropdown-item " href="./adminclients/index">Clients</a>
                                                         <a class="dropdown-item " href="./projects/index">Projects</a>
@@ -89,7 +105,7 @@
                                     </div>
         </li>
                     <li class="topnav-item dropdown">
-          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-coins"></i> eFINANCE <i class="fas fa-caret-down"></i></a>
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-coins  icon"></i> eFINANCE <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-list cust-drop ">
                                           <a class="dropdown-item " href="./vouchers/index">Vouchers</a>
                                                         <a class="dropdown-item " href="./vouchers/review">Review Vouchers</a>
@@ -97,7 +113,7 @@
                                     </div>
         </li>
                     <li class="topnav-item dropdown">
-          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-dolly"></i> ePROCUREMENT <i class="fas fa-caret-down"></i></a>
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-dolly icon"></i> ePROCUREMENT <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-list cust-drop ">
                                           <a class="dropdown-item " href="./requisitions/index">Requisitions</a>
                                                         <a class="dropdown-item " href="./requisitions/review">Requisitions Review</a>
@@ -107,9 +123,9 @@
                                                         <a class="dropdown-item " href="./purchaseorders/approve">PurchaseOrders Approval</a>
                                     </div>
         </li>
-                    <li class="topnav-item"><a class="topnav-link " href="./admindashboard/dashboard"><span> <i class="fas fa-tachometer-alt"></i> </span> ADMINPANEL</a></li>
+                    <li class="topnav-item"><a class="topnav-link " href="./admindashboard/dashboard"><span> <i class="fas fa-tachometer-alt icon"></i> </span> ADMINPANEL</a></li>
                           <li class="topnav-item dropdown">
-          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-user"></i> Hello: System Admin <i class="fas fa-caret-down"></i></a>
+          <a href="#" class="topnav-link dropdown-btn"> <i class="fas fa-user icon"></i> Hello: System Admin <i class="fas fa-caret-down"></i></a>
           <div class="dropdown-list cust-drop dropdown-menu-right">
                                           <a class="dropdown-item " href="./register/logout">Logout</a>
                                                         <a class="dropdown-item " href="./useradmin/passwordupdate">Update Password</a>
@@ -192,21 +208,21 @@
       <nav class="sidenav" id="sidenav">
   <div class="sidenav-item">
     <a href="#" class="sidenav-toggler-link sidenav-toggler">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars icon2"></i>
       <span>Resize</span>
     </a>
   </div>
   <ul class="sidenav-list">
             <li class="sidenav-item">
           <a href="./dashboards/index" class="sidenav-link ">
-            <i class="fas fa-tachometer-alt"></i>
+            <i class="fas fa-tachometer-alt icon2 "></i>
             <span>DASHBOARD</span>
           </a>
         </li>
               <li class="sidenav-item">
-          <a href="#" class="sidenav-link"><i class="fas fa-desktop"> </i>
+          <a href="#" class="sidenav-link"><i class="fas fa-desktop icon2"> </i>
             <span>
-              eSYSTEM              <i class="fas fa-angle-down"></i>
+              eSYSTEM              <i class=" fas fa-angle-down "></i>
             </span>
           </a>
           <ul class="d-none">
@@ -241,7 +257,7 @@
                       </ul>
         </li>
               <li class="sidenav-item">
-          <a href="#" class="sidenav-link"><i class="fas fa-coins"> </i>
+          <a href="#" class="sidenav-link"><i class="fas fa-coins icon2"> </i>
             <span>
               eFINANCE              <i class="fas fa-angle-down"></i>
             </span>
@@ -262,7 +278,7 @@
                       </ul>
         </li>
               <li class="sidenav-item">
-          <a href="#" class="sidenav-link"><i class="fas fa-dolly"> </i>
+          <a href="#" class="sidenav-link"><i class="fas fa-dolly icon2"> </i>
             <span>
               ePROCUREMENT              <i class="fas fa-angle-down"></i>
             </span>
@@ -296,7 +312,7 @@
         </li>
               <li class="sidenav-item">
           <a href="./admindashboard/dashboard" class="sidenav-link ">
-            <i class="fas fa-tachometer-alt"></i>
+            <i class="fas fa-tachometer-alt icon2"></i>
             <span>ADMINPANEL</span>
           </a>
         </li>
@@ -391,7 +407,7 @@
   </ul>
   <div class="sidenav-item">
     <a href="#" class="sign-out">
-      <i class="fas fa-sign-out-alt"></i>
+      <i class="fas fa-sign-out-alt icon-signout icon2"></i>
       <span>Sign Out</span>
     </a>
   </div>
@@ -408,15 +424,16 @@
     <div class="card-body">
     <form id="pagerForm" action="" method="post" autocomplete="off" onsubmit="return false;">
         <div class="row align-items-end  text-center text-uppercase text-white font-weight-bold">
-          <div class="form-group col-sm">
-            <!-- set to col-sm so as to stack on top of each other on small screen -->
-            <label class="sr-only" for="search">Search</label>
-            <div class="input-group">
-              <input class="form-control" id="search" name="search" value="" placeholder="Search..." />
-              <button class="input-group-append btn btn-sm bg-maincolor text-white"><i class="fas fa-search"></i></button>
-              <!-- P-1 padding-1 to center the search icon to centre -->
+          <div class="row align-items-end text-center text-uppercase text-white font-weight-bold">
+            <div class="form-group col-sm position-relative">
+              <label class="sr-only" for="search">Search</label>
+              <input class="form-control search-input" id="search" name="search" value="" placeholder="Search..." />
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
             </div>
           </div>
+          
           <input type="hidden" name="page" id="page" value="1" />          <input type="hidden" name="limit" id="limit" value="25" />          <div class="form-group col-sm"><label for="supplier" class="control-label">Supplier</label><select id="supplier" name="supplier"  class="form-control"><option value="" selected="selected">-Select Supplier-</option><option value="8">Abdirahman Sheikh Mohamed</option><option value="14">Al Habib Bookshop</option><option value="6">Al-Hussain Investment Limited</option><option value="16">Creditor/Financing Agent</option><option value="15">Equity Bank</option><option value="9">Guyo transaport and Logistics Limited</option><option value="10">Jimale Osman Abdille</option><option value="12">Manyatta Water Suppliers</option><option value="4">Marsabit Central Bookshop</option><option value="7">Nasibo Kotobo</option><option value="13">Osman Dube</option><option value="5">Rajwan Investment Limited</option><option value="11">Sololo Water Suppliers</option><option value="2">Staff Salary</option><option value="1">Tradesman Machinery Garments</option><option value="3">White City Communications Limited</option></select><span class="invalid-feedback"></span></div>          <div class="form-group col-sm"><label for="branch" class="control-label">Branch</label><select id="branch" name="branch"  class="form-control"><option value="" selected="selected">-Select Branch-</option><option value="5">Isiolo</option><option value="2">Mandera</option><option value="3">Marsabit</option><option value="4">Moyale</option><option value="1">Nairobi</option><option value="6">Samburu</option></select><span class="invalid-feedback"></span></div>          <div class="form-group col-sm"><label class="control-label" for="start_date">Star Date</label><input type="date" id="start_date" name="start_date" value="" class="form-control" /><span class="invalid-feedback"></span></div>          <div class="form-group col-sm"><label class="control-label" for="end_date">End Date</label><input type="date" id="end_date" name="end_date" value="" class="form-control" /><span class="invalid-feedback"></span></div>          <div class="form-group col-sm">
             <button class="form-control btn btn-sm bg-maincolor text-white text-uppercase font-weight-bold">Search</button>
           </div>
@@ -472,7 +489,10 @@ Marsabit</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/1"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/1"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/1"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('1');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -491,7 +511,10 @@ management
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/2"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/2"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/2"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('2');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -511,7 +534,10 @@ Marsabit)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/3"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/3"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/3"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('3');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -531,7 +557,10 @@ Marsabit)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/4"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/4"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/4"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('4');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -550,7 +579,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/5"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/5"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/5"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('5');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -569,7 +601,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/6"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/6"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/6"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('6');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -585,7 +620,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/7"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/7"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/7"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('7');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -601,7 +639,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/8"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/8"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/8"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('8');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -617,7 +658,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/9"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/9"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/9"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('9');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -633,7 +677,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/10"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/10"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/10"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('10');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -649,7 +696,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/11"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/11"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/11"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('11');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -665,7 +715,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/12"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/12"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/12"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('12');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -681,7 +734,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/13"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/13"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/13"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('13');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -697,7 +753,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/14"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/14"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/14"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('14');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -713,7 +772,10 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/15"><i class="fas fa-print"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/15"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/15"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('15');return false;"><i class="fas fa-trash-alt"></i></a>
@@ -729,8 +791,13 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Reviewed</td>
                 <td class="small text-uppercase font-weight-bolder">Approved</td>
                 <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/print/16"><i class="fas fa-print"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/16"><i class="fas fa-edit"></i></a>
+                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+                <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
+                  <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+                
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/16"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('16');return false;"><i class="fas fa-trash-alt"></i></a>
                 </td>
