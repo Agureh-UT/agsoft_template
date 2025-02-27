@@ -97,50 +97,41 @@ select {
   flex-direction: column;
   z-index: 10;
 }
-.pane1 {
-  display: grid;
-  background-color: var(--theme-color2);
-  /* color: var(--dark); */
-  grid-auto-flow: column;
-  grid-template-columns: auto;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-  padding-inline: 10px;
-  
-}
 
-.pane1_agsoftLogo {
-  display: flex;
-  align-items: center;
-}
-.pane1_agsoftLogo img {
-  height: 58px;
-  width: 108px;
-  padding-block: 9px;
-  margin-block: 5px;
-}
-.pane1_clientLogo {
-  display: flex;
-}
-.pane1_clientLogo img {
-  max-height: 68px;
-  max-width: 68px;
-}
-.pane1_text {
-  font-size: .8rem;
-  font-weight: 700;
-  text-align: center;
-}
+
 .pane1_logout {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  font-size: .8rem;
-  font-weight: 500;
-  text-align: start;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+  border-radius: 4px;
 }
+
+.pane1_logout i {
+  font-size: 2.5rem; /* Adjust icon size */
+  color: #007bff; /* Match theme color */
+  margin-bottom: 0.5rem; /* Space between icon and text */
+}
+
+.pane1_logout a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.pane1_logout a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
 .topnav {
   display: flex;
   justify-content: space-between;
@@ -1130,17 +1121,30 @@ input.form-control:read-only {
 }
 
 
+/* Enhanced Label Styling */
+label.control-label {
+  font-size: 1.5rem; /* Slightly bigger for better readability */
+  font-weight: 600; /* Medium-bold for a clean look */
+  color: #dfd4d4; /* Soft color for better contrast */
+  text-transform: capitalize; /* Capitalize each word */
+  letter-spacing: 0.5px; /* Slight spacing for elegance */
+  margin-bottom: 5px; /* Extra spacing between label and input */
+  display: block; /* Ensures proper positioning */
+}
 
+
+/* Date Picker Wrapper */
 .date-input-wrapper {
   position: relative;
   width: 100%;
   max-width: 350px;
 }
 
+/* Modern Date Input */
 input[type="date"] {
   appearance: none;
   width: 100%;
-  padding: 1rem 3.5rem 1rem 1.2rem;
+  padding: 1rem 3.5rem 1rem 1.2rem; /* Space for the icon */
   border: 2px solid rgba(0, 123, 255, 0.6);
   border-radius: 12px;
   background: #ffffff;
@@ -1152,6 +1156,7 @@ input[type="date"] {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover & Focus Effects */
 input[type="date"]:hover {
   border-color: rgba(0, 123, 255, 1);
 }
@@ -1160,20 +1165,481 @@ input[type="date"]:focus {
   border-color: rgba(0, 123, 255, 1);
 }
 
-.date-input-wrapper::after {
-  content: "\1F4C5"; 
-  font-size: 3rem; 
+/* Custom Larger Calendar Icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: url('/images/favicons/calendar.png'); /* Custom Icon */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 21px; /* Increased Size */
+  height: 18px;
+  cursor: pointer;
+  opacity: 0.9;
   position: absolute;
-  right: 10px;
-  top: 50%;
+  right: 15px;
+  top: 67%;
   transform: translateY(-50%);
-  color: #007bff;
-  opacity: 0.8;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out, transform 0.2s;
+  transition: opacity 0.2s ease-in-out, transform 0.2s;
 }
 
-.date-input-wrapper:hover::after {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+/* General Styles for Form Elements */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/* Styled Dropdowns (Supplier & Branch) */
+select.form-control {
+  appearance: none; /* Hide default arrow */
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 2px solid rgba(0, 123, 255, 0.6);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Custom Styled Select Dropdown */
+select.form-control {
+  appearance: none; /* Removes default browser styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('/images/favicons/dropdown.png'); /* Adjust path */
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 35px; /* Ensure text does not overlap with icon */
+  border: 2px solid rgba(194, 169, 102, 0.6);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover & Focus Effect */
+select.form-control:hover,
+select.form-control:focus {
+  border-color: rgba(0, 123, 255, 1);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+input[type="date"] {
+  appearance: none;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Hover & Focus Effects */
+select.form-control:hover, 
+input[type="date"]:hover {
+  border-color: #007bff;
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+}
+
+select.form-control:focus, 
+input[type="date"]:focus {
+  border-color: #0056b3;
+  box-shadow: 0 6px 16px rgba(0, 86, 179, 0.5);
+}
+
+
+
+
+
+/* Card Header Styling */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333131; /* Dark theme */
+  color: #ffffff; /* White text */
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px 10px 0 0; /* Smooth rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #007bff; /* Accent color line */
+}
+
+/* Title Styling */
+.card-header h6 {
+  font-size: 1.4rem; /* Increased size for better visibility */
+  font-weight: 800; /* Bolder text */
+  text-transform: uppercase;
+  letter-spacing: 1.5px; /* More spacing for emphasis */
+  color: #f8f9fa; /* Light color for contrast */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+
+/* Button Styling */
+.card-header a.btn {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient for a modern look */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between icon and text */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+/* Button Hover Effect */
+.card-header a.btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Active Effect */
+.card-header a.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.card-header a i {
+  font-size: 1rem;
+  color: #f8f9fa;
+}
+
+/* Button Group Styling */
+.card-header .btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+
+/* Stylish Search Button */
+button.form-control.btn {
+  font-size: 1.3rem; /* Readable text */
+  font-weight: bold;
+  color: #ffffff; /* White text for contrast */
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Modern blue gradient */
+  border: none;
+  padding: 0.6rem 0.9rem; /* Reduced padding */
+
+  border-radius: 8px; /* Smooth rounded edges */
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+/* Hover Effect */
+button.form-control.btn:hover {
+  background: linear-gradient(135deg, #0056b3, #004080); /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Active (Click) Effect */
+button.form-control.btn:active {
+  background: linear-gradient(135deg, #004080, #003366);
+  transform: scale(0.98); /* Subtle shrink effect */
+}
+
+
+
+
+
+
+
+.pane1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push AGsoft logo left, Client logo centered */
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 15px 20px;
+  border-bottom: 2px solid #ddd;
+  list-style: none;
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.pane1_agsoftLogo {
+  flex: 1; /* Take up space */
+  display: flex;
+  justify-content: flex-start; /* Keep AGsoft logo on the left */
+}
+
+.pane1_clientLogo {
+  flex: 2; /* Take more space */
+  display: flex;
+  justify-content: center; /* Center the whole section */
+  align-items: center; /* Align logo and text in the middle */
+  gap: 15px; /* Add space between logo and text */
+  margin-left: -26%; /* Shift the section slightly to the left */
+}
+
+.pane1_agsoftLogo img,
+.pane1_clientLogo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.pane1_text {
+  font-size: 1.1rem; /* Match Purchase Order text size */
+  font-weight: 700; /* Bold text */
+  text-transform: uppercase; /* Uppercase for consistency */
+  letter-spacing: 1px; /* Spaced-out letters */
+  color: #0e0d0d; /* Keep your color */
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pane1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pane1_agsoftLogo,
+  .pane1_clientLogo {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .pane1_clientLogo {
+    flex-direction: row;
+    text-align: center;
+    margin-left: 0; /* Reset margin on small screens */
+  }
+}
+
+
+/* 🌟 General Table Styling */
+.custom-table {
+  width: 100%;
+
+  color: #ffffff;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+
+}
+
+/* 🔵 Table Header */
+.custom-table thead {
+  background: linear-gradient(135deg, #4a4a6a, #1e1e2d);
+}
+
+.custom-table thead th {
+  padding: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.custom-table {
+  color: #333; /* Dark gray text for better readability */
+  font-weight: 500; /* Medium boldness */
+  font-size: 10px; /* Adjust text size */
+}
+
+.custom-table th {
+  background-color: #004085; /* Dark blue background for headers */
+  color: #ffffff; /* White text for headers */
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa; /* Light gray for even rows */
+}
+
+.custom-table tbody tr:hover {
+  background-color: #d6e9f8; /* Light blue on hover */
+  transition: 0.3s;
+}
+
+.custom-table a {
+  color: #007bff; /* Blue links */
+  text-decoration: none;
+}
+
+.custom-table a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* 🎯 Table Rows */
+.custom-table tbody tr {
+  background: #dedfd6;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-table tbody tr:hover {
+  background: #39c017;
+}
+
+/* 🎨 Row Borders */
+.custom-table tbody td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 🏷 Status Badges */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.badge-reviewed {
+  background: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.badge-approved {
+  background: rgba(0, 123, 255, 0.15);
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+/* 🎯 Action Buttons */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  margin: 0 4px;
+  text-decoration: none;
+}
+
+.action-btn i {
+  color: white;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 🟥 PDF Download */
+.pdf {
+  background: #dc3545;
+}
+
+.pdf:hover {
+  background: #b71c1c;
+}
+
+/* 🟩 Edit */
+.edit {
+  background: #28a745;
+}
+
+.edit:hover {
+  background: #1e7e34;
+}
+
+/* 🟦 Form Template */
+.form {
+  background: #17a2b8;
+}
+
+.form:hover {
+  background: #117a8b;
+}
+
+/* 🟧 Delete */
+.delete {
+  background: #ff4d4d;
+}
+
+.delete:hover {
+  background: #cc0000;
+}
+
+/* 📱 Responsive Table */
+@media (max-width: 768px) {
+  .custom-table thead {
+    display: none;
+  }
+
+  .custom-table tbody,
+  .custom-table tr,
+  .custom-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .custom-table tbody tr {
+    margin-bottom: 15px;
+    background: #323248;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  .custom-table tbody td {
+    text-align: right;
+    padding: 10px;
+    border-bottom: none;
+    position: relative;
+  }
+
+  .custom-table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    left: 15px;
+    color: #bbb;
+    text-align: left;
+  }
 }

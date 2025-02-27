@@ -460,7 +460,7 @@
           </button>
         </li>
       </ul>
-      <div class="col-12 table-responsive">
+      <!-- <div class="col-12 table-responsive">
         <table class="table table-sm table-striped table-bordered text-white font-weight-bold bg-secondary border-darkBlue" id="itemTable" width="100%" cellspacing="0">
           <thead class="bg-maincolor text-uppercase">
             <th class="small text-uppercase font-weight-bolder">Ref No</th>
@@ -496,7 +496,49 @@ Marsabit</td>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/1"><i class="fas fa-edit"></i></a>
                   <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/1"><i class="fas fa-edit"></i>Formtemplate</a>
                   <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('1');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                </td> -->
+                <div class="col-12 table-responsive">
+                  <table class="table custom-table" id="itemTable">
+                    <thead>
+                      <tr>
+                        <th>Ref No</th>
+                        <th>Description</th>
+                        <th>User</th>
+                        <th>Branch</th>
+                        <th>Supplier</th>
+                        <th>Valid Date</th>
+                        <th>Review Status</th>
+                        <th>Approval Status</th>
+                        <th class="text-center">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-id="1">
+                        <td>128000001</td>
+                        <td>Vehicle hire (core management) (5 days in Marsabit)</td>
+                        <td>yussuf.osda</td>
+                        <td>Marsabit</td>
+                        <td>Rajwan Investment Limited</td>
+                        <td>2022-11-21</td>
+                        <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
+                      </tr>
+              
+                
               </tr>
                           <tr data-id="2">
                 <td class="small text-uppercase font-weight-bolder">128000002</td>
@@ -508,17 +550,22 @@ management
                 <td class="small text-uppercase font-weight-bolder">Isiolo</td>
                 <td class="small text-uppercase font-weight-bolder">Rajwan Investment Limited</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/2"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/2"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('2');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="3">
                 <td class="small text-uppercase font-weight-bolder">128000003</td>
@@ -531,17 +578,22 @@ Marsabit)</td>
                 <td class="small text-uppercase font-weight-bolder">Mandera</td>
                 <td class="small text-uppercase font-weight-bolder">Abdirahman Sheikh Mohamed</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/3"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/3"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('3');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="4">
                 <td class="small text-uppercase font-weight-bolder">128000004</td>
@@ -554,16 +606,21 @@ Marsabit)</td>
                 <td class="small text-uppercase font-weight-bolder">Marsabit</td>
                 <td class="small text-uppercase font-weight-bolder">Jimale Osman Abdille</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/4"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/4"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('4');return false;"><i class="fas fa-trash-alt"></i></a>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                <td><span class="badge badge-approved">Approved</span></td>
+                <td class="text-center">
+                  <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                    <i class="fas fa-file-pdf"></i>
+                  </a>
+                  <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                    <i class="fas fa-file-alt"></i>
+                  </a>
+                  <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
                 </td>
               </tr>
                           <tr data-id="5">
@@ -576,16 +633,21 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Isiolo</td>
                 <td class="small text-uppercase font-weight-bolder">Abdirahman Sheikh Mohamed</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/5"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/5"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('5');return false;"><i class="fas fa-trash-alt"></i></a>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                <td><span class="badge badge-approved">Approved</span></td>
+                <td class="text-center">
+                  <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                    <i class="fas fa-file-pdf"></i>
+                  </a>
+                  <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                    <i class="fas fa-file-alt"></i>
+                  </a>
+                  <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
                 </td>
               </tr>
                           <tr data-id="6">
@@ -598,17 +660,22 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Isiolo</td>
                 <td class="small text-uppercase font-weight-bolder">Jimale Osman Abdille</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/6"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/6"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('6');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="7">
                 <td class="small text-uppercase font-weight-bolder">128000007</td>
@@ -617,17 +684,22 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Marsabit</td>
                 <td class="small text-uppercase font-weight-bolder">Marsabit Central Bookshop</td>
                 <td class="small text-uppercase font-weight-bolder">2022-02-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/7"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/7"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('7');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="8">
                 <td class="small text-uppercase font-weight-bolder">128000008</td>
@@ -636,17 +708,22 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Isiolo</td>
                 <td class="small text-uppercase font-weight-bolder">Marsabit Central Bookshop</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/8"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/8"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('8');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="9">
                 <td class="small text-uppercase font-weight-bolder">128000009</td>
@@ -655,16 +732,21 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Mandera</td>
                 <td class="small text-uppercase font-weight-bolder">Manyatta Water Suppliers</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/9"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/9"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('9');return false;"><i class="fas fa-trash-alt"></i></a>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                <td><span class="badge badge-approved">Approved</span></td>
+                <td class="text-center">
+                  <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                    <i class="fas fa-file-pdf"></i>
+                  </a>
+                  <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                    <i class="fas fa-file-alt"></i>
+                  </a>
+                  <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
                 </td>
               </tr>
                           <tr data-id="10">
@@ -674,17 +756,22 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Isiolo</td>
                 <td class="small text-uppercase font-weight-bolder">Sololo Water Suppliers</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/10"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/10"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('10');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="11">
                 <td class="small text-uppercase font-weight-bolder">128000011</td>
@@ -693,17 +780,22 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Marsabit</td>
                 <td class="small text-uppercase font-weight-bolder">White City Communications Limited</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/11"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/11"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('11');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="12">
                 <td class="small text-uppercase font-weight-bolder">128000012</td>
@@ -712,17 +804,22 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Isiolo</td>
                 <td class="small text-uppercase font-weight-bolder">White City Communications Limited</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/12"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/12"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('12');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="13">
                 <td class="small text-uppercase font-weight-bolder">128000013</td>
@@ -731,16 +828,21 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Marsabit</td>
                 <td class="small text-uppercase font-weight-bolder">Tradesman Machinery Garments</td>
                 <td class="small text-uppercase font-weight-bolder">2022-11-21</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/13"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/13"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('13');return false;"><i class="fas fa-trash-alt"></i></a>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                <td><span class="badge badge-approved">Approved</span></td>
+                <td class="text-center">
+                  <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                    <i class="fas fa-file-pdf"></i>
+                  </a>
+                  <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                    <i class="fas fa-file-alt"></i>
+                  </a>
+                  <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
                 </td>
               </tr>
                           <tr data-id="14">
@@ -750,17 +852,22 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Isiolo</td>
                 <td class="small text-uppercase font-weight-bolder">Osman Dube</td>
                 <td class="small text-uppercase font-weight-bolder">2023-01-11</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/14"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/14"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('14');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="15">
                 <td class="small text-uppercase font-weight-bolder">128000015</td>
@@ -769,17 +876,22 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Samburu</td>
                 <td class="small text-uppercase font-weight-bolder">Al Habib Bookshop</td>
                 <td class="small text-uppercase font-weight-bolder">2023-01-09</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/edit/15"><i class="fas fa-edit"></i></a>
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/15"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('15');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                           <tr data-id="16">
                 <td class="small text-uppercase font-weight-bolder">128000016</td>
@@ -788,19 +900,22 @@ days Isiolo)</td>
                 <td class="small text-uppercase font-weight-bolder">Samburu</td>
                 <td class="small text-uppercase font-weight-bolder">Al Habib Bookshop</td>
                 <td class="small text-uppercase font-weight-bolder">2023-01-09</td>
-                <td class="small text-uppercase font-weight-bolder">Reviewed</td>
-                <td class="small text-uppercase font-weight-bolder">Approved</td>
-                <td class="text-center small text-uppercase font-weight-bolder">
-                  <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                    <i class="fa-regular fa-file-pdf"></i>
-                </a>
-                <a class="btn btn-sm btn-darkBlue mr-1  pdf" href="./purchaseorders/print/3">
-                  <i class="fa-solid fa-pen-to-square"></i>
-              </a>
-                
-                  <a class="btn btn-sm btn-darkBlue mr-1" href="./purchaseorders/formtemplate/16"><i class="fas fa-edit"></i>Formtemplate</a>
-                  <a class="btn btn-sm btn-danger" href="#" onclick="deleteReq('16');return false;"><i class="fas fa-trash-alt"></i></a>
-                </td>
+                <td><span class="badge badge-reviewed">Reviewed</span></td>
+                        <td><span class="badge badge-approved">Approved</span></td>
+                        <td class="text-center">
+                          <a class="action-btn pdf" href="./purchaseorders/print/3" title="Download PDF">
+                            <i class="fas fa-file-pdf"></i>
+                          </a>
+                          <a class="action-btn edit" href="./purchaseorders/edit/1" title="Edit">
+                            <i class="fas fa-edit"></i>
+                          </a>
+                          <a class="action-btn form" href="./purchaseorders/formtemplate/1" title="Form Template">
+                            <i class="fas fa-file-alt"></i>
+                          </a>
+                          <a class="action-btn delete" href="#" onclick="deleteReq('1');return false;" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                          </a>
+                        </td>
               </tr>
                       </tbody>
         </table>
